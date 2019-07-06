@@ -1,0 +1,32 @@
+{% if page.url == "/" %}
+<header id = "nav-top" class = "home">
+
+{% elsif page.url != "" %}
+<header id = "nav-top" class = "">
+{% endif %}
+
+
+	<div class = "nav__hamburger_menu">
+	</div>	
+	<a href="/" id = "logo-top">
+		Hunting REDUX
+	</a>
+
+	<div class = "nav__link_wrapper">
+
+		<a href="/releases">Releases</a>
+
+		<a href="/mhp3rd">MHP3rd Redux</a>
+
+		<a href = "/videos">Videos</a>
+
+		<a href="/about">About</a>
+
+		<a href="https://ppsspp.org" class="ppsspp_logo" >Get PPSSPP</a>
+
+	</div>
+
+	<div class = "dl_links">
+		<a href="/" class = "btn">Download Texture Pack</a>
+	</div>
+</header>

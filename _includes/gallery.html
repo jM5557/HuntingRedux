@@ -1,0 +1,28 @@
+<div class = "gallery__cont">
+	<h2 class = "heading">Screenshots</h2>
+
+	<div>
+
+		<div id = "gallery__root_wrapper">
+			<div id="gallery__root"></div>
+			<script src = "{{site.baseurl}}/assets/data/{{ include.game }}Data.js"></script>
+		</div>
+
+		<noscript>
+		<ul class = "gallery__container">
+
+		{% capture ipath %}{{ include.game }}/gallery{% endcapture %}
+
+		{% for image in site.static_files %}
+		    {% if image.path contains ipath %}
+		        <li>
+					
+					<img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+
+		        </li>
+		    {% endif %}
+		{% endfor %}
+		</ul>
+		</noscript>
+	</div>
+</div>
