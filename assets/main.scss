@@ -22,6 +22,30 @@ header {
 	position: relative;
 }
 
+.with-bars {
+	&:after {
+		content: "";
+		width: 40%;
+		height: 25px;
+		background-color: orange;
+		position: absolute;
+		right: -10px;
+		bottom: -5px;
+		z-index: -1;
+	}
+
+	&:before {
+		content: "";
+		width: 40%;
+		height: 25px;
+		background-color: #d8c67d;
+		position: absolute;
+		left: -10px;
+		top: -5px;
+		z-index: -1;
+	}
+}
+
 .btn {
 	background-color: $colorBlack;
 	padding: 18px 32px;
@@ -30,7 +54,6 @@ header {
 	font-size: 11px;
 	letter-spacing: 1.55px;
 	text-transform: uppercase;
-	border-radius: 6px;
 	border: none;
 
 	&.small {
@@ -41,28 +64,49 @@ header {
 #nav-top {
 	text-align: center;
 	margin: auto;
-	position: relative;
-	z-index: 3;
+	position: fixed;
+	z-index: 9999;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	padding-left: 15px;
-	padding-right: 35px;
+	padding-right: 15px;
 	font-family: $fontSerif;
-	background: url(#{$imgPath + "los-gray-2.png"}) no-repeat top -180px right -180px;
-	background-size: auto 450px;
-	background-color: #FFF;
-
-	border-bottom: solid 10px #111;
-
-	text-align: left;
-
+	background: url("img/bar-bg.jpg") no-repeat center center;
+    background-color: #623d29;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    text-align: left;
 	
+	&:before {
+		content: "";
+		top:0; left: 0;
+		bottom: 0; right: 0;
+		position: absolute;
+		background-color: #38383e;
+		opacity: 0.45;
+		z-index: -1;
+	}
+
+	.dl-btn {
+		background-color: #a57e6b;
+		padding: 18px 32px;
+		font-family: "Barlow", sans-serif;
+		font-size: 11px;
+		letter-spacing: 1.55px;
+		border-radius: 500px;
+		text-transform: uppercase;
+		border: none;
+		box-shadow: 0px 3px 25px -5px #131313;
+		color: #FFF;
+	}
 
 	.nav__link_wrapper {
 		margin-left: 25px;
 
 		a {
-			padding: 12px 6px;
+			padding: 8px 8px;
+			margin: auto 4px;
 			display: inline-block;
 			font-size: 14px;
 			letter-spacing: 1.55px;
@@ -71,18 +115,25 @@ header {
 			font-family: $fontHeavy;
 			text-transform: uppercase;
 			border-bottom: solid 4px transparent;
+			position: relative;
 	
 			&, &:visited, &:link {
-				color: $colorBlack;
+				color: #FFF;
 			}
 	
 			&:hover {
-				border-bottom-color: #111;
+				@include barOnBottom(#a1cbee);
+
+				&:after {
+					height: 18px;
+					right: 0px;
+				}
 			}
 
 			&.ppsspp_logo {
 				color: #4dacb9;
 				padding-left: 45px;
+				padding-top: 12px;
 				background-size: auto 36px;
 			}
 		}
@@ -95,11 +146,12 @@ header {
 			box-sizing: border-box;
 			left: 0;
 			margin: auto;
-			background-color: $colorBlack;
 			text-align: left;
 			z-index: 99999;
 			animation: slideInLeft 0.72s 1;
-			box-shadow: 0px 14px 75px -5px #000;
+			border: solid 4px;
+			background-color: #FFF;
+			padding: 15px;
 
 			@keyframes slideInLeft {
 				from {
@@ -116,10 +168,10 @@ header {
 			}
 
 			a, a:visited, a:link {
-				color: #FFF;
 				display: block;
-				padding: 20px 15px;
+				padding: 12px 20px;
 				border-bottom: none;
+				text-align: left;
 
 				&:hover {
 					opacity: 0.64;
@@ -128,10 +180,9 @@ header {
 			}
 
 			a.ppsspp_logo {
-				color: #77e6f5;
-				padding-left: 0px;
-				text-align: center;
 				background: none;
+
+				padding-left: 0px;
 			}
 		}
 	}
@@ -143,6 +194,10 @@ header {
     	height: 60px;
 		text-indent: -9999999px;
 		margin: auto;
+
+		@media all and (max-width: $breakpoint__mobile_header) {
+			margin-left: 15%;
+		}
 
 		@media all and (max-width: $breakpoint__mobile) {
 			background: url(#{$imgPath + $logoBlackSmall}) no-repeat center center;
@@ -178,7 +233,7 @@ header {
 		top: 0%;
 		transform: translateY(50%);
 		right: 0;
-		padding-right: 75px;
+		padding-right: 15px;
 
 		a {
 			display: inline-block;
@@ -264,9 +319,8 @@ header {
 }
 
 main.page-content {
-
+	padding-top: 90px;
 	min-height: 64.25vh;
-
 }
 
 .btn-ctr {
@@ -279,42 +333,85 @@ main.page-content {
 }
 
 #top-header {
-	background: url(#{$imgPath + $latestGame + '/large-bg.jpg' }) no-repeat center center;
-	background-color: #111;
-	background-size: cover;
+	color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row nowrap;
 	position: relative;
 	z-index: 1;
-	color: $colorWhite;
-	padding: 130px 15px 80px;
+	padding-top: 90px;
+    margin-bottom: 80px;
 
-	&:before {
-		content: "";
-		top:0; left: 0;
-		bottom: 0; right: 0;
-		position: absolute;
-	    background-color: #38383e;
-	    opacity: 0.45;
-	    z-index: -1;
+	.main-center-img {
+		background: url(#{$imgPath + $latestGame + '/hero-wp-2.jpg' }) no-repeat center center;
+		background-color: #111;
+		background-size: cover;
+		height: 310px;
+		width: 640px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: column wrap;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+		margin-bottom: -55px;
+		box-shadow: -15px 15px 0px #91d0b8;
+		margin-left: -285px;
+
+		&:before {
+			content: "";
+			top:0; left: 0;
+			bottom: 0; right: 0;
+			position: absolute;
+			background-color: #777;
+			opacity: 0.25;
+			z-index: -1;
+		}
+		
+		img {
+			max-width: 32px;
+			display: block;
+			margin: auto;
+		}
+
+		p {
+			background-color: #111;
+			background-color: rgba(1,1,1, 0.62);
+			padding: 6px 12px;
+			display: inline-block;
+			margin-top: 15px;
+		}
+
+		a {
+			color: #FFF;
+			font-family: $fontHeavy;
+			font-weight: bolder;
+			font-size: 15px;
+			text-transform: uppercase;
+			letter-spacing: 1.75px;
+		}
 	}
 
 	#main-center-inner-wrapper {
 		
 		margin-left: 35px;
-	    box-sizing: border-box;
+		box-sizing: border-box;
+		margin-top: 50px;
 
 		.main-center-content-wrapper {
-			margin-left: 90px;
     		text-transform: uppercase;
     		position: relative;
-    		z-index: 2;
+			z-index: 2;
 		}
 	}
 
 	.zinogre-render {
 		position: absolute;
-		max-width: 720px;
+		max-width: 715px;
 		bottom: -170px;
-		left: 60px;
+		left: -60px;
 		z-index: -1;
 	}
 
@@ -337,7 +434,13 @@ main.page-content {
 
 	.slogan {
 		font-weight: bolder;
-		font-size: 3.45rem;
+		font-size: 45px;
+		position: relative;
+		color: #75604a;
+
+		&.main {
+			@include barOnTop(#d4b390);
+		}
 	}
 
 	.back {
@@ -359,23 +462,17 @@ main.page-content {
 	}
 
 	.latest-rls {
-		font-size: 11px;
+		font-family: $fontHeavy;
 		font-weight: bolder;
-		padding: 20px 58px 20px 24px;
-	    border: none;
-	    text-transform: uppercase;
-		text-align: left;
-		border-radius: 8px;
-		display: inline-block;
-		vertical-align: middle;
-		background-color: #77e6f5;
-		color: #134f67;
-		box-shadow: 0px 5px 20px -2px #101010;
-		line-height: unset;
-		background: #77e6f5 url('./img/icon-dl.png') no-repeat center right 6px;
-		background-size: 45px auto;
-
-		border-bottom: solid 4px #4dacb9;
+		letter-spacing: 1.75px;
+		font-size: 19px;
+		position: relative;
+		color: #ffffff;
+		background-color: #a57e6b;
+		border: none;
+		z-index: 1;
+		padding: 12px 24px;
+		text-transform: uppercase;
 	}
 	
 }
@@ -420,7 +517,7 @@ main.page-content {
 }
 
 #content-center {
-	margin: 150px auto 100px auto;
+	margin: 180px auto 80px auto;
 	position: relative;
 	z-index: 2;
 	text-align: center;
@@ -464,7 +561,7 @@ main.page-content {
 			height: auto;
 			display: block;
    			filter: contrast(80%) sepia(25%);
-   			border-radius: 7px;
+   			border-radius: 0px;
 		}
 	}
 }
@@ -769,20 +866,36 @@ main.page-content {
 	.inner-content {
 		padding: 25px;
 		perspective: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	img,
-	.side-box {
-		display: inline-block;
-		vertical-align: middle;
+	.box-art {
+		position: relative;
+		z-index: 1;
+		padding-left: 240px;
+
+		&:before {
+			content: "";
+			background: url("img/monster-decor.png") no-repeat center center;
+			background-size: contain;
+			top: 45px;
+			bottom: 45px;
+			width: 320px;
+			z-index: -1;
+			position: absolute;
+			margin: auto;
+			left: 0px;
+			opacity: 0.64;
+		}
 	}
 
 	img {
 		max-width: 280px;
 	    margin-right: 45px;
-	    border-radius: 10px;
-	    box-shadow: 0px 0px 25px -5px #12193c;
-	    transform: rotateY(25deg);
+		box-shadow: -15px 16px 0px #cbbf84;
+		transform: rotateY(25deg);
 	}
 
 	.side-box {
@@ -791,9 +904,8 @@ main.page-content {
 
 		h4 {
 			font-family: $fontNormal;
-			font-weight: lighter;
 			letter-spacing: 3px;
-			font-size: 1.125rem;
+			font-size: 18px;
 			color: #313131;
 			padding-bottom: 15px;
 		}
@@ -812,7 +924,10 @@ main.page-content {
 			padding: 18px;
 			padding-left: 50px;
 			font-weight: bolder;
-    		color: #5e8ea8;
+			color: #5e8ea8;
+			font-family: $fontHeavy;
+			text-transform: uppercase;
+			letter-spacing: 1.75px;
 		}
 	}
 }

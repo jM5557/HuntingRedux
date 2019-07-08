@@ -2,7 +2,7 @@
 
 layout: home
 
-permalink: /releases
+permalink: "/releases/"
 
 ---
 

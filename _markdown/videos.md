@@ -1,5 +1,5 @@
 ---
-permalink: /videos
+permalink: "/videos/"
 ---
 
 <section class = "sect">

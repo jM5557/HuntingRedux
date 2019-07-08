@@ -2,7 +2,7 @@
 
 layout: home
 
-permalink: /mhp3rd/
+permalink: "/mhp3rd/"
 
 gameName: Monster Hunter Portable 3rd
 gameSubname: MHP3rd Redux

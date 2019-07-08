@@ -26,12 +26,20 @@ previewItems:
 ---
 
 <section id="top-header">
+
+	
+		<div class = "main-center-img">
+			<a href = "https://youtube.com/" class = "play-btn">
+				
+				<p>Watch the Trailer</p>
+			</a>
+		</div>
 	
 	<div id="main-center-inner-wrapper">
 
 		<div class="main-center-content-wrapper">
 
-			<h1 class="slogan">
+			<h1 class="slogan main">
 				{{ page.latestGameShort }} Redux.
 			</h1>
 
@@ -43,14 +51,6 @@ previewItems:
 				<button class="latest-rls">
 					Download Latest Release
 				</button>
-
-
-				<a href = "/{{ page.latestGame }}/" class="btn">
-					<span>
-						Watch the Trailer
-					</span>
-				</a>
-
 			</div>
 
 			<img alt = "Zinogre Render" src="assets/img/zinogre-render.png" class = "zinogre-render">
@@ -91,13 +91,14 @@ previewItems:
 <section id = "home-bottom">
 	
 	<div class="inner-content">
-
-		<img src="assets/img/{{ page.latestGame }}/hero-wp.jpg" alt="game box art">
+		
+		<div class="box-art">
+			<img src="assets/img/{{ page.latestGame }}/hero-wp.jpg" alt="game box art">
+		</div>
 
 		<div class="side-box">
-		
-			<h4>MHP3rd Redux</h4>
-			<h3>High Quality Hunting.</h3>
+
+			<h3 class = "with-bars">High Quality Hunting.</h3>
 
 			<p>
 				<button class="btn">Download Texture Pack</button>
