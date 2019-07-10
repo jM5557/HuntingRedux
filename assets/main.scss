@@ -8,18 +8,46 @@
 @import 'variables';
 @import 'mixins';
 
+body, html {
+	width: 100%;
+	height: 100%;
+}
 
 body {
 	font-family: $fontNormal;
 	height: 100%;
+	overflow-x: hidden;
 }
 
 h1,h2,h3,
 h4,h5,h6,
-header {
+header,
+.link-btn {
 	font-family: $fontHeavy;
 	font-weight: bolder;
 	position: relative;
+}
+
+.link-btn {
+	background-color: $brown-btn;
+	padding: 12px 12px;
+	color: #FFF;
+	display: block;
+}
+
+.game-link {
+	margin: 15px auto;
+	display: block;
+
+	a {
+		max-width: 180px;
+		width: auto;
+		margin: auto;
+		font-size: 11px;
+		letter-spacing: 1.55px;
+		text-transform: uppercase;
+		padding: 18px 12px;
+	}
 }
 
 .with-bars {
@@ -50,6 +78,7 @@ header {
 	background-color: $colorBlack;
 	padding: 18px 32px;
 	font-family: $fontHeavy;
+	font-weight: bolder;
 	color: $colorWhite;
 	font-size: 11px;
 	letter-spacing: 1.55px;
@@ -88,19 +117,6 @@ header {
 		z-index: -1;
 	}
 
-	.dl-btn {
-		background-color: #a57e6b;
-		padding: 18px 32px;
-		font-family: "Barlow", sans-serif;
-		font-size: 11px;
-		letter-spacing: 1.55px;
-		border-radius: 500px;
-		text-transform: uppercase;
-		border: none;
-		box-shadow: 0px 3px 25px -5px #131313;
-		color: #FFF;
-	}
-
 	.nav__link_wrapper {
 		margin-left: 25px;
 
@@ -122,7 +138,7 @@ header {
 			}
 	
 			&:hover {
-				@include barOnBottom(#a1cbee);
+				@include barOnBottom(#89b741);
 
 				&:after {
 					height: 18px;
@@ -140,26 +156,26 @@ header {
 
 		@media all and (max-width: $breakpoint__mobile_header) {
 			position: absolute;
-			top: 100px;
+			top: 85px;
 			max-width: 540px;
 			width: 85%;
 			box-sizing: border-box;
-			left: 0;
+			right: 15px;
 			margin: auto;
 			text-align: left;
 			z-index: 99999;
-			animation: slideInLeft 0.72s 1;
-			border: solid 4px;
-			background-color: #FFF;
+			animation: slideInRight 0.72s 1;
+			border: dashed 4px #4a200d;
+			background-color: #5c4b38;
 			padding: 15px;
 
-			@keyframes slideInLeft {
+			@keyframes slideInRight {
 				from {
-					transform: translateX(-720px);
+					transform: translateX(720px);
 				}
 
 				64%, 80% {
-					transform: translateX(-20px);
+					transform: translateX(20px);
 				}
 
 				72%, to {
@@ -176,6 +192,10 @@ header {
 				&:hover {
 					opacity: 0.64;
 					border-bottom: none;
+
+					&:after {
+						content: none;
+					}
 				}
 			}
 
@@ -196,7 +216,7 @@ header {
 		margin: auto;
 
 		@media all and (max-width: $breakpoint__mobile_header) {
-			margin-left: 15%;
+			
 		}
 
 		@media all and (max-width: $breakpoint__mobile) {
@@ -208,13 +228,17 @@ header {
 
 	.nav__hamburger_menu {
 		background: url('./img/hamburger-menu-btn.png') no-repeat center center;
-		background-size: contain;
+		background-size: 75% auto;
 		height: 45px;
 		width: 45px;
+		padding: 8px;
 		display: inline-block;
 		vertical-align: middle;
 		margin: auto 12px;
 		display: none;
+		background-color: #75604a;
+		cursor: pointer;
+		vertical-align: middle;
 
 		@media all and (max-width: $breakpoint__mobile_header) {
 			display: inline-block;
@@ -230,8 +254,8 @@ header {
 
 	.dl_links {
 		position: absolute;
-		top: 0%;
-		transform: translateY(50%);
+		top: 50%;
+		transform: translateY(-50%);
 		right: 0;
 		padding-right: 15px;
 
@@ -242,6 +266,23 @@ header {
 
 		.btn {
 			color: #FFF;
+		}
+	}
+
+	a.dl-btn {
+		background-color: $brown-btn;
+		padding: 18px 32px;
+		font-family: "Barlow", sans-serif;
+		font-size: 11px;
+		letter-spacing: 1.55px;
+		border-radius: 500px;
+		text-transform: uppercase;
+		border: none;
+		box-shadow: 0px 3px 25px -5px #131313;
+		color: #FFF;
+
+		@media all and (max-width: $breakpoint__mobile_header) {
+			display: none;
 		}
 	}
 }
@@ -341,14 +382,14 @@ main.page-content {
 	position: relative;
 	z-index: 1;
 	padding-top: 90px;
-    margin-bottom: 80px;
+	margin-bottom: 80px;
 
 	.main-center-img {
 		background: url(#{$imgPath + $latestGame + '/hero-wp-2.jpg' }) no-repeat center center;
-		background-color: #111;
+		background-color: $dark-brown;
 		background-size: cover;
-		height: 310px;
-		width: 640px;
+		height: 240px;
+		width: 480px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -357,7 +398,7 @@ main.page-content {
 		position: relative;
 		z-index: 1;
 		margin-bottom: -55px;
-		box-shadow: -15px 15px 0px #91d0b8;
+		box-shadow: -15px 15px 0px $light-brown;
 		margin-left: -285px;
 
 		&:before {
@@ -365,7 +406,7 @@ main.page-content {
 			top:0; left: 0;
 			bottom: 0; right: 0;
 			position: absolute;
-			background-color: #777;
+			background-color: #131313;
 			opacity: 0.25;
 			z-index: -1;
 		}
@@ -377,9 +418,8 @@ main.page-content {
 		}
 
 		p {
-			background-color: #111;
-			background-color: rgba(1,1,1, 0.62);
-			padding: 6px 12px;
+			background-color: $brown-btn;
+			padding: 9px 12px;
 			display: inline-block;
 			margin-top: 15px;
 		}
@@ -436,10 +476,10 @@ main.page-content {
 		font-weight: bolder;
 		font-size: 45px;
 		position: relative;
-		color: #75604a;
+		color: $dark-brown;
 
 		&.main {
-			@include barOnTop(#d4b390);
+			@include barOnTop($light-brown);
 		}
 	}
 
@@ -468,11 +508,22 @@ main.page-content {
 		font-size: 19px;
 		position: relative;
 		color: #ffffff;
-		background-color: #a57e6b;
+		background-color: $brown-btn;
 		border: none;
 		z-index: 1;
 		padding: 12px 24px;
 		text-transform: uppercase;
+	}
+
+	@media all and (max-width: $breakpoint__small_window) {
+		flex-direction: column;
+		padding-top: 25px;
+
+		.main-center-img {
+			display: block;
+			max-width: 95%;
+			margin: auto;
+		}
 	}
 	
 }
@@ -541,12 +592,12 @@ main.page-content {
 			h3 {
 				font-size: 18px;
 				letter-spacing: 0.95px;
-				font-family: $fontSerif;
 				font-weight: bolder;
 				text-transform: uppercase;
 				padding: 25px 15px 15px;
 				white-space: normal;
 				width: 95%;
+				color: $dark-brown;
 			}
 
 			p {
@@ -560,9 +611,36 @@ main.page-content {
 			width: 100%;
 			height: auto;
 			display: block;
-   			filter: contrast(80%) sepia(25%);
    			border-radius: 0px;
 		}
+
+		@media all and (max-width: $breakpoint__mobile_header) {
+			
+			&:nth-of-type(1), &:nth-of-type(2) {
+				width: 45%;
+				margin-bottom: 25px;
+			}
+
+			&:nth-of-type(3) {
+				display: block;
+				width: 95%;
+				margin: auto;
+			}
+		}
+
+		@media all and (max-width: $breakpoint__mobile) {
+			&:nth-of-type(1), 
+			&:nth-of-type(2),
+			&:nth-of-type(3) {
+				display: block;
+				width: 90%;
+				margin: 20px auto;
+			}
+		}
+	}
+
+	@media all and (max-width: $breakpoint__mobile_header) {
+		margin-top: 80px;
 	}
 }
 
@@ -738,10 +816,6 @@ main.page-content {
 			padding: 12px 18px;
 			margin: auto 5px;
 			font-weight: lighter;
-			font-family: $fontHeavy;
-			text-transform: lowercase;
-			font-size: 0.95rem;
-			letter-spacing: 1.25px;
 		}
 	}
 
@@ -780,6 +854,12 @@ main.page-content {
 			letter-spacing: 3.05px;
 			font-size: 0.75rem;
 		}
+
+
+	}
+
+	@media all and (max-width: $breakpoint__mobile_header) {
+		.notice { text-align: left; }
 
 
 	}
@@ -841,12 +921,16 @@ main.page-content {
 	.heading {
 		text-align: left;
 		color: #FFF;
-		font-family: $fontSerif;
-		padding: 25px 0px 25px;
-		font-weight: lighter;
+		padding: 3px 0px 3px;
 		font-size: 24px;
 		letter-spacing: 1.55px;
 		text-transform: uppercase;
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		margin: 15px auto;
+
+		@include barOnTop($dark-brown);
 
 	}
 
@@ -871,6 +955,15 @@ main.page-content {
 		align-items: center;
 	}
 
+	@media all and (max-width: $breakpoint__small_window) {
+		padding: 20px;
+		
+		.inner-content {
+			padding: 15px 5px;
+			flex-direction: column;
+		}
+	}
+
 	.box-art {
 		position: relative;
 		z-index: 1;
@@ -889,6 +982,14 @@ main.page-content {
 			left: 0px;
 			opacity: 0.64;
 		}
+
+		@media all and (max-width: $breakpoint__small_window) {
+			padding-left: 0px;
+
+			&:before {
+				left: -200px;
+			}
+		}
 	}
 
 	img {
@@ -896,11 +997,19 @@ main.page-content {
 	    margin-right: 45px;
 		box-shadow: -15px 16px 0px #cbbf84;
 		transform: rotateY(25deg);
+
+		@media all and (max-width: $breakpoint__small_window) {
+			margin: auto;
+			display: block;
+
+		}
 	}
 
 	.side-box {
 
 		max-width: 640px;
+		position: relative;
+		z-index: 2;
 
 		h4 {
 			font-family: $fontNormal;
@@ -928,6 +1037,16 @@ main.page-content {
 			font-family: $fontHeavy;
 			text-transform: uppercase;
 			letter-spacing: 1.75px;
+		}
+
+		@media all and (max-width: $breakpoint__small_window) {
+
+			margin-top: 35px;
+
+			h3 {
+				font-size: 35px;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -1269,14 +1388,14 @@ main.page-content {
 
 		@media all and (max-width: $breakpoint__mobile) {
 			display: block;
-			width: 90%;
-			height: 125px;
-			margin: 0px auto;
+			width: 95%;
+			height: 160px;
+			margin: 5px auto;
 
 			img {
 				width: 100%;
 				height: auto;
-				top: -75px;
+				top: 0px;
 				left: 0px;
 			}
 

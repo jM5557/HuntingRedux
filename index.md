@@ -15,13 +15,16 @@ latestTrailerID: "wsGVYFBxY88"
 previewItems:
  - image: "screens-1.png"
    heading: "An Ecological Marvel."
-   subheading: "Hunting Redux remasters past foes, making them more fearsome than ever."
+   subheading: "Past Monsters re-textured to stand more fearsome than ever before!"
+   link: "/mhp3rd/monsters"
  - image: "screens-2.png"
    heading: "With All The Comforts Of Home."
-   subheading: "Visit the most welcoming villages and hostile environments in HD."
+   subheading: "HD Yukumo Village is open to all hunters, from farm to faculties!"
+   link: "/mhp3rd/village"
  - image: "screens-4.png"
-   heading: "A Fresh Take On Familiar Visuals."
-   subheading: "The same great gameplay with redefined visuals for a new generation."
+   heading: "The Same Great Hunts."
+   subheading: "Vibrant visuals and UI redesign gives new life to the classic Monster Hunting experience!"
+   link: "/mhp3rd/ui"
 
 ---
 
@@ -78,6 +81,15 @@ previewItems:
 			<p>
 				{{ previewItem.subheading }}
 			</p>
+
+			<div class = "game-link">
+				<a  href = "{{ previewItem.link }}" 
+					alt = "Link to game details"
+					class = "link-btn"
+				>
+					View Details
+				</a>
+			</div>
 		</div>
 	</div>
 	{% endfor %}
