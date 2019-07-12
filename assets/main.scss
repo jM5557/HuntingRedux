@@ -147,7 +147,7 @@ header,
 			}
 
 			&.ppsspp_logo {
-				color: #4dacb9;
+				color: #7cdcf7;
 				padding-left: 45px;
 				padding-top: 12px;
 				background-size: auto 36px;
@@ -296,11 +296,11 @@ header,
 	padding-top: 35px;
 }
 
-#top-header.mhp3rd__header {
-	background: #111 url(#{$imgPath + $latestGame + "/screens-3.png"}) no-repeat center center;
-	background-size: cover;
-	padding-top: 180px;
-	padding-bottom: 30px;
+.large-img {
+	background-size: cover !important;
+	position: relative;
+	width: 100%;
+	height: auto;
 }
 
 .text-container {
@@ -314,10 +314,31 @@ header,
 }
 
 .text-container p, .text_content {
-	font-size: 0.95rem;
+	font-size: 15px;
 	letter-spacing: 1.15px;
-	line-height: 2.05rem;
+	line-height: 24px;
 	margin-bottom: 10px;
+	font-family: $fontNormal;
+}
+
+.row-items {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-flow: row nowrap;
+
+	.install {
+		width: 100%;
+	}
+
+	.sect {
+		padding: 10px;
+	}
+
+	@media all and (max-width: $breakpoint__mobile_header) {
+		flex-direction: column;
+	}
+
 }
 
 .sect, .post__top_outer_content {
@@ -325,21 +346,15 @@ header,
 	margin: auto auto auto 8%;
 
 	header {
-		font-size: 32px;
+		font-size: 36px;
 		color: $colorBlack;
-		padding: 15px 0px 15px;
+		padding: 0px 0px 15px;
 		max-width: 640px;
-
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
 			
-		&:after {
-			content: "";
-			background: url('./img/icon-bar.png') no-repeat center bottom 3px;
-			background-size: contain;
-			width: 75px;
-			height: 45px;
-			display: inline-block;
-			vertical-align: bottom;
-		}
+		@include barOnTop ($light-brown);
 	}
 
 	&.gallery {
@@ -528,6 +543,12 @@ main.page-content {
 	
 }
 
+.page_desc {
+	line-height: 24px;
+	font-size: 16px;
+	padding: 15px 5px;
+}
+
 .visit-link-cont {
 	padding: 15px 25px;
 	text-align: center;
@@ -556,7 +577,7 @@ main.page-content {
 
 .post {
 	max-width: 1080px;
-	margin: 38px auto auto;
+	margin: 13px auto auto;
 	padding: 15px;
 
 	.post-header {
@@ -653,6 +674,12 @@ main.page-content {
 	display: block;
 }
 
+.hero__btn_ctr {
+	margin: 5px auto;
+	text-align: left;
+	padding: 20px 10px;
+}
+
 #top-header .hero__container {
 	text-align: left;
 	position: relative;
@@ -682,12 +709,6 @@ main.page-content {
 			margin-top: 5px;
 			font-family: 1.75rem;
 		}
-	}
-
-	.hero__btn_ctr {
-		margin: 2.5px auto;
-		text-align: left;
-		padding-top: 22.5px;
 	}
 
 	.hero_art__box {
@@ -1033,7 +1054,7 @@ main.page-content {
 			padding: 18px;
 			padding-left: 50px;
 			font-weight: bolder;
-			color: #5e8ea8;
+			color: #7cdcf7;
 			font-family: $fontHeavy;
 			text-transform: uppercase;
 			letter-spacing: 1.75px;
@@ -1066,11 +1087,11 @@ main.page-content {
 		margin: auto auto auto 0px;
 		clear: both;
 		overflow: auto;
-		padding: 15px 15px 15px 15px;
+		padding: 5px 15px 5px 15px;
 
 		li {
 			display: inline-block;
-			padding: 15px 19px 15px 15px;
+			padding: 5px 19px 5px 15px;
 			position: relative;
 
 			&:after {
@@ -1091,6 +1112,17 @@ main.page-content {
 				&:after {
 					content: none;
 				}	
+			}
+
+			h2 {
+				font-size: 24px;
+			}
+
+			h3 {
+				font-weight: lighter;
+				padding: 15px 0px;
+				font-size: 16px;
+				color: $dark-brown;
 			}
 		}
 	}
@@ -1198,13 +1230,13 @@ main.page-content {
 	box-shadow: none;
 }
 
-.dl_link__btn.clear {
+.dl_link__btn.clear,
+.clear {
 	background-color: transparent;
 	color: $colorBlack;
 	width: auto;
-    padding: 20px 25px;
-    font-size: 0.95rem;
-    font-family: $fontNormal;
+    padding: 12px 20px;
+    font-size: 18px;
     font-weight: bolder;
     border: none;
     box-shadow: none;
@@ -1273,7 +1305,7 @@ main.page-content {
 
 		.post__date {
 			font-size: 0.95rem;
-			color: #aaa;
+			color: $dark-brown;
 			text-align: left;
 			display: block;
 			font-family: $fontHeavy;
@@ -1303,21 +1335,30 @@ main.page-content {
 .post__releases {
 
 	.post__release {
-		margin: 30px auto;
+		margin: auto auto;
 		text-align: left;
+		padding: 0px 5px;
 		
 		.post__inner_wrapper {
-			padding: 12px;
-			border-left: solid 14px $colorBlack;
+			padding: 15px 8px;
+			border-bottom: dashed 3px $dark-brown;
+		}
+
+		&:nth-of-type(1) {
+
+			.post__inner_wrapper {
+				border-top: dashed 3px $dark-brown;
+			}
 		}
 
 		time {
-			font-size: 0.95rem;
-			color: #aaa;
+			font-size: 20px;
+			color: $light-brown;
 			text-align: left;
 			display: block;
 			font-family: $fontHeavy;
 			letter-spacing: 3px;
+			margin-bottom: 10px;
 		}
 		
 		.post__top_matter {
@@ -1327,9 +1368,8 @@ main.page-content {
 			width: auto;
 			
 			.post__title {
-				font-family: $fontNormal;
 				font-weight: bolder;
-				font-size: 4rem;
+				font-size: 30px;
 				display: block;
 				max-width: unset;
 				width: auto;
@@ -1338,9 +1378,9 @@ main.page-content {
 		}
 
 		.post__subtitle {
-			font-size: 1.05rem;
-			letter-spacing: 2.5px;
-			padding: 12px 5px;
+			font-size: 18px;
+			letter-spacing: 1.25px;
+			padding: 15px 0px 8px;
 		}
 
 		.post__category {
@@ -1544,6 +1584,13 @@ main.page-content {
 		height: 32vw;
 		background-color: #111;
 		margin-bottom: 25px;
+		position: relative;
+
+		iframe {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	.small-item-container {

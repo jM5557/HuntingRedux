@@ -1,6 +1,6 @@
 ---
 
-layout: home
+layout: default
 
 permalink: "/releases/"
 
@@ -36,7 +36,7 @@ permalink: "/releases/"
 
 
 				<p class = "post__action">
-					<a href="{{post.release__link}}" class="dl_link__btn">Download Now</a>
+					<a href="{{post.release__link}}" class="btn">Download Now</a>
 
 				    <a href="{{post.url}}" class = "dl_link__btn clear">Read More</a>
 				</p>

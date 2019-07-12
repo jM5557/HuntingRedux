@@ -1,6 +1,6 @@
 ---
 
-layout: home
+layout: default
 
 permalink: "/mhp3rd/"
 
@@ -8,58 +8,45 @@ gameName: Monster Hunter Portable 3rd
 gameSubname: MHP3rd Redux
 gameReleaseName: mhp3rd
 
-topArt: hero-wp-2.jpg
-
+largeImg: 'mhp3rd/screens-3.png'
 ---
 
+<section class = "main-wrapper">
+	<div class="sect text-container">
 
-<section id = "top-header" class = "mhp3rd__header">
-	
-	<div class = "hero__container">
+		<header>
+			{{ page.gameName }} Redux
+		</header>
 
-		<div class = "hero-top__wrapper">
-			
-				
-			<div class="hero_art_box__heading">
-				
-				<div class = "inner_heading">
-					<h3>{{ page.gameName }}</h3>
-					
-					<h5>redux - v.1.0.0</h5> 
-				</div>
+		<div class = "hero__btn_ctr">
 
-				<div class = "hero__btn_ctr">
+			<a href="releases/{{ include.gameReleaseName }}" class="btn latest-rls">
+				Download Latest Release
+			</a>
 
-					<a href="releases/{{ include.gameReleaseName }}" class=" latest-rls">Download Latest Release</a>
+			<a href = "https://youtube.com/" class = "btn clear">		
+				Watch the Trailer
+			</a>
 
-					<a href="https://google.com" class = "btn trailer-link btn">
-							Watch the Trailer
-						</a>
-					
-				</div>
-			</div>
-			
 		</div>
-		
 	</div>
 
+	<div class = "text-container">
+		<div class = "row-items">
+			<section class="sect install">
+				
+				{% include installation.html gameSubname = page.gameSubname gameReleaseName = page.gameReleaseName %}
+
+			</section>
+
+			<section class = 'sect'>
+
+				{% include controller_setup.html %}
+				
+			</section>
+		</div>
+	</div>
 </section>
-
-
-<div class = "text-container">
-
-	<section class="sect">
-		
-		{% include installation.html gameSubname = page.gameSubname gameReleaseName = page.gameReleaseName %}
-
-	</section>
-
-	<section class = 'sect'>
-
-		{% include controller_setup.html %}
-		
-	</section>
-</div>
 
 <section id = 'gallery' class="mhp3rd">
 	{% include gallery.html game = page.gameReleaseName %}
