@@ -1094,18 +1094,6 @@ main.page-content {
 			padding: 5px 19px 5px 15px;
 			position: relative;
 
-			&:after {
-				content: "";
-				position: absolute;
-				right: 0px;
-				top: 0;
-				bottom: 0;
-				height: 7px;
-				width: 7px;
-				background-color: $colorBlack;
-				margin: auto;
-			}
-
 			&:nth-last-of-type(1) {
 				padding-right: 0px;
 
@@ -1124,6 +1112,20 @@ main.page-content {
 				font-size: 16px;
 				color: $dark-brown;
 			}
+		}
+	}
+
+	.special-thanks {
+		li:after {
+			content: "";
+			position: absolute;
+			right: 0px;
+			top: 0;
+			bottom: 0;
+			height: 7px;
+			width: 7px;
+			background-color: $colorBlack;
+			margin: auto;
 		}
 	}
 

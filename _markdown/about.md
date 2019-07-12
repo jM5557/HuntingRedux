@@ -49,19 +49,19 @@ permalink: "/about/"
 					
 					<li>
 						<h2>Icewind</h2>
-						<h3>Creator of HuntingRedux & Lead Texture Artist</h3>
-						<p>
-							Madman and mastermind, responsible for the creation and development of this project. Often hunts with a Wiimote + Nunchuck (so try it, we swear it's good)!
-						</p>
-
+						<h3>Lead HuntingRedux Texture Artist</h3>
 					</li>
 
 					<li>
 						<h2>Raptorhunter6</h2>
 						<h3>Web Developer & Video Editor</h3>
-						<p>
-							Monster Hunter fanatic. Can't seem to leave Pokke Village, even after his trip to the New World. Made this website too, so we hope you think it's neat!
-						</p>
+					</li>
+
+					<li>
+						<h2>Hazmat</h2>
+						<h3>
+							HuntingRedux Texture Artist - Armors/Equipment
+						</h3>
 					</li>
 
 				</ul>
@@ -79,7 +79,7 @@ permalink: "/about/"
 				Hunters & Communities who we've encountered throughout our journey...
 			</p>
 
-			<ul class = "text__cont box__content">
+			<ul class = "text__cont box__content special-thanks">
 
 				<li>MHVuze</li>
 
@@ -87,9 +87,7 @@ permalink: "/about/"
 
 				<li>daemon1</li>
 
-				<li>Zindea </li> 
-
-				<li>hazmatdoll</li>
+				<li>Zindea </li>
 
 				<li>MHWorld Modding Discord</li>
 
