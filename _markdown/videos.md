@@ -1,11 +1,5 @@
 ---
 permalink: "/videos/"
-
-videos:
- - url: "wsGVYFBxY88"
- - url: "98mSNK2UKqg"
- - url: "X0w1iPWyoRA"
- - url: "47DKoSDeOUQ"
 ---
 
 <section class = "sect">
@@ -22,13 +16,14 @@ videos:
 
     <div class = "video-gallery-wrapper">
         
-        {% for video in page.videos %}
-        <div class = "large-item">
-            <iframe src="https://www.youtube-nocookie.com/embed/{{ video.url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id = "root">
         </div>
-        {% endfor %}
 
     </div>
 
 
 </section>
+<Link rel = "stylesheet" type = "text/css" href = "./../assets/frontend/static/css/main.5a34f5dd.chunk.css" />
+<script src = "./../assets/frontend/static/js/2.673dccd0.chunk.js"></script>
+<script src = "./../assets/frontend/static/js/runtime~main.a8a9905a.js"></script>
+<script src = "./../assets/frontend/static/js/main.d71132e6.chunk.js"></script>
