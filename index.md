@@ -125,3 +125,6 @@ previewItems:
 	</div>
 
 </section>
+
+<script src = "./../assets/frontend/assets/lib/images.js">
+</script>

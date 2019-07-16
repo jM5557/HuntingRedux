@@ -49,5 +49,9 @@ largeImg: 'mhp3rd/screens-3.png'
 </section>
 
 <section id = 'gallery' class="mhp3rd">
-	{% include gallery.html game = page.gameReleaseName %}
+	{% include gallery.html game = page.latestGame %}
 </section>
+
+<script src = "./../assets/frontend/assets/lib/images.js">
+</script>
+
