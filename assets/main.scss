@@ -962,17 +962,6 @@ main.page-content {
 		url(#{$imgPath + $latestGame + "/large-bg-2.png"}) no-repeat bottom right 0px;
 		background-size: cover;
 	}
-
-	img {
-		max-width: 170px;
-		margin: 2.5px 2.5px;
-		display: inline-block;
-		cursor: pointer;
-
-		&:hover {
-			opacity: 0.75;
-		}
-	}
 }
 
 
@@ -1414,10 +1403,9 @@ main.page-content {
     display: none;
 }
 
-#gallery__container,
-.gallery__container {
+.gallery {
 
-	li {
+	.gallery-thumbnail {
 		height: 160px;
 		width: 160px;
 		overflow: hidden;
@@ -1633,17 +1621,34 @@ main.page-content {
 			margin-bottom: 25px;
 		}
 
-		img {
+		.video-thumbnail {
+			display: inline-block;
 			margin: 5px;
+			width: 48%;
+			position: relative;	
+
+			.play-btn {
+				background: url('./img/play-btn.png') no-repeat center center;
+				background-size: auto 85px;
+				position: absolute;
+				top: 0; left: 0;
+				bottom: 0; right: 0;
+				z-index: 2;
+				cursor: pointer;
+			}
+		}
+
+		img {
 			cursor: pointer;
 			background-color: #111;
 			border-radius: 0px;
+			width: 100%;
 		}
 	}
 
 	.game-videos {
-		img {
 
+		.video-thumbnail {
 			opacity: 0;
 
 			&:nth-of-type(odd) {
@@ -1659,6 +1664,10 @@ main.page-content {
 					animation-delay: #{$i * 0.10}s;
 				}
 			}
+
+		}
+
+		img {
 
 		}
 	}
@@ -1687,4 +1696,43 @@ main.page-content {
 		}
 	}
 
+}
+
+.modal {
+	.controls-wrapper {
+		padding: 15px 10px;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	button {
+		background-color: $light-brown;
+		padding: 12px 20px;
+		font-family: $fontHeavy;
+		font-size: 20px;
+		text-transform: uppercase;
+		color: #FFF;
+		font-family: $fontHeavy;
+		font-size: 15px;
+		font-weight: bolder;
+		background-color: $dark-brown;
+		border: none;
+		margin: auto 2.5px;
+		letter-spacing: 1.55px;
+
+		&.active {
+			box-shadow: -3px 3px 0px #7cdcf7;
+		}
+	}
+
+	.close-btn {
+		position: absolute;
+		top: 10px;
+		right: 5px;
+		border: none;
+		background-color: $dark-brown;
+		color: #FFF;
+		font-size: 25px;
+		padding: 5px 15px;
+	}
 }
