@@ -228,9 +228,9 @@ header,
 
 	.nav__hamburger_menu {
 		background: url('./img/hamburger-menu-btn.png') no-repeat center center;
-		background-size: 75% auto;
-		height: 45px;
-		width: 45px;
+		background-size: 55% auto;
+		height: 55px;
+		width: 55px;
 		padding: 8px;
 		display: inline-block;
 		vertical-align: middle;
@@ -240,6 +240,7 @@ header,
 		cursor: pointer;
 		vertical-align: middle;
 		border: solid 3px $dark-brown;
+		text-indent: -99999999px;
 
 		@media all and (max-width: $breakpoint__mobile_header) {
 			display: inline-block;

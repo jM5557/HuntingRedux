@@ -65,7 +65,7 @@ let games = [
     }
 ]
 
-window.hr__videos = {
+window.hr__vids = {
     games,
     categories
 }

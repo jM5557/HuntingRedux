@@ -28,6 +28,9 @@ previewItems:
 
 ---
 
+<script src = "./assets/frontend/assets/lib/home-dropdown.js">
+</script>
+
 <section id="top-header">
 
 	
@@ -50,11 +53,7 @@ previewItems:
 				HD Texture Pack.
 			</h1>
 
-			<div>
-				<button class="latest-rls">
-					Download Latest Release
-				</button>
-			</div>
+			<div id = "dropdown-btn"></div>
 
 			<img alt = "Zinogre Render" src="assets/img/zinogre-render.png" class = "zinogre-render">
 
