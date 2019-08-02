@@ -1,11 +1,16 @@
-window.hr__options = [
-    { id: 0, text: 'Google Drive - Mirror 01', url_to_redirect: 'https://google.com/'  },
-    { id: 1, text: 'MEGA - Mirror 02', url_to_redirect: 'https://youtube.com/' }
-];
+window.hr__dropdowns = [{
 
-window.hr__actionHandler = {
-    func: (o) => {
-        location.href = o.url_to_redirect
-    },
-    btn_text: 'Download Texture Pack'
+    id: 1,
+
+    options: [
+            { id: 0, text: 'Google Drive - Mirror 01', url: 'https://google.com/'  },
+            { id: 1, text: 'Google Drive - Mirror 02', url: 'https://google.com/'  },
+            { id: 2, text: 'MEGA - Mirror 03', url: 'https://youtube.com/' }
+    ],
+
+    actionHandler: {
+        text: 'Download Texture Pack',
+        type: 'LINK'
+    }
 }
+];

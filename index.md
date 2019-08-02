@@ -5,11 +5,6 @@
 layout: home
 
 latestGame: mhp3rd
-
-latestGameShort: MHP3rd
-
-latestGameName: "Monster Hunter Portable 3rd"
-
 latestTrailerID: "wsGVYFBxY88"
 
 previewItems:
@@ -27,41 +22,6 @@ previewItems:
    link: "/mhp3rd/ui"
 
 ---
-
-<script src = "./assets/frontend/assets/lib/home-dropdown.js">
-</script>
-
-<section id="top-header">
-
-	
-		<div class = "main-center-img">
-			<a href = "https://youtube.com/" class = "play-btn">
-				
-				<p>Watch the Trailer</p>
-			</a>
-		</div>
-	
-	<div id="main-center-inner-wrapper">
-
-		<div class="main-center-content-wrapper">
-
-			<h1 class="slogan main">
-				{{ page.latestGameShort }} Redux.
-			</h1>
-
-			<h1 class="slogan back">
-				HD Texture Pack.
-			</h1>
-
-			<div id = "dropdown-btn"></div>
-
-			<img alt = "Zinogre Render" src="assets/img/zinogre-render.png" class = "zinogre-render">
-
-		</div>
-		
-	</div>
-
-</section>
 
 <section id = "content-center">
 
@@ -86,7 +46,8 @@ previewItems:
 					alt = "Link to game details"
 					class = "link-btn"
 				>
-					View Details
+					View Details 
+					<b class="right-caret"></b>
 				</a>
 			</div>
 		</div>
@@ -115,10 +76,14 @@ previewItems:
 				<button class="btn">Download Texture Pack</button>
 			</p>
 
-			<p>
-				<a href="https://ppsspp.org" class="ppsspp_logo">Only on PPSSPP</a>
-			</p>
-
+			
+				<div class = "box-item">
+					<h2>Requirements</h2>
+					<ul>
+						<li>PPSSPP Emulator <a class = "ppsspp-link" href = "https://ppsspp.org">Download Now</a></li>
+						<li>Monster Hunter Portable 3rd ISO</li>
+					</ul>
+				</div>
 		</div>
 
 	</div>
