@@ -106,15 +106,12 @@ header,
 	text-align: center;
 	margin: auto;
 	z-index: 9999;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 0px 35px 0px;
 	font-family: $fontSerif;
     text-align: left;
 
 	.nav__link_wrapper {
-		margin-left: 25px;
+		margin-left: 15px;
 
 		a {
 			padding: 8px 8px;
@@ -151,18 +148,19 @@ header,
 		}
 
 		@media all and (max-width: $breakpoint__mobile_header) {
-			position: absolute;
-			top: 85px;
+			position: fixed;
+			top: 25px;
 			max-width: 540px;
 			width: 85%;
+			left: 0px;
+			right: 0px;
+			margin: auto;
 			box-sizing: border-box;
-			right: 15px;
 			margin: auto;
 			text-align: left;
 			z-index: 99999;
 			animation: slideInRight 0.72s 1;
-			border: dashed 4px #4a200d;
-			background-color: #5c4b38;
+			background-color: #ffeb43;
 			padding: 15px;
 
 			@keyframes slideInRight {
@@ -184,10 +182,11 @@ header,
 				padding: 12px 20px;
 				border-bottom: none;
 				text-align: left;
+				color: #312e38;
 
 				&:hover {
-					background-color: $dark-brown;
 					border-bottom: none;
+					background-color: #d0ba08;
 
 					&:after {
 						content: none;
@@ -223,8 +222,8 @@ header,
 	}
 
 	.nav__hamburger_menu {
-		background: url('./img/hamburger-menu-btn.png') no-repeat center center;
-		background-size: 55% auto;
+		background: url('./img/hamburger-menu.png') no-repeat center center;
+		background-size: 75% auto;
 		height: 55px;
 		width: 55px;
 		padding: 8px;
@@ -232,10 +231,10 @@ header,
 		vertical-align: middle;
 		margin: auto 12px;
 		display: none;
-		background-color: #75604a;
+		background-color: transparent;
 		cursor: pointer;
 		vertical-align: middle;
-		border: solid 3px $dark-brown;
+		border: solid thin #ffeb43;
 		text-indent: -99999999px;
 
 		@media all and (max-width: $breakpoint__mobile_header) {
@@ -255,7 +254,7 @@ header,
 		top: 50%;
 		transform: translateY(-50%);
 		right: 0;
-		padding-right: 15px;
+		padding-right: 25px;
 
 		a {
 			display: inline-block;
@@ -291,9 +290,9 @@ header,
 			width: 0;
 
 			position: absolute;
-    		top: 50%;
+    		top: 52%;
     		transform: translateY(-50%);
-    		right: 38px;
+    		right: 48px;
 		}
 
 		@media all and (max-width: $breakpoint__mobile_header) {
@@ -314,15 +313,18 @@ header,
 
 .page-content {
 	padding-top: 0px;
-	border-bottom: solid thin #ccc;
 }
 
 #top-header {
+	$header-border-radius: 50px;
+
 	background: url('./img/mhp3rd/large-bg.jpg') no-repeat center center;
 	background-size: cover;
 	background-color: #1b4067;
-	padding-top: 0px;
-	padding-bottom: 30px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	position: relative;
+	border-radius: 0px 0px $header-border-radius $header-border-radius;
 
 	&:before {
 		content: "";
@@ -332,6 +334,28 @@ header,
 		background-color: #29293c;
 		opacity: 0.75;
 		z-index: -1;
+		border-radius: 0px 0px $header-border-radius $header-border-radius;
+	}
+
+	.slogan {
+		font-weight: bolder;
+		font-size: 24px;
+		position: relative;
+		color: #ffffff;
+		letter-spacing: 1.55px;
+		margin: auto;
+		margin-bottom: 6px;
+		text-shadow: 0px 3px 18px #111;
+		text-transform: uppercase;
+		text-align: center;
+
+		&.large {
+			font-size: 36px;
+		}
+	}
+
+	.main-center-content-wrapper {
+		margin-top: 15px;
 	}
 }
 
@@ -442,7 +466,7 @@ header,
 
 	header {
 		font-size: 36px;
-		padding: 0px 0px 15px;
+		padding: 0px 0px 0px;
 		max-width: 640px;
 		position: relative;
 		z-index: 1;
@@ -470,35 +494,41 @@ header,
 }
 
 .game-panel {
-	padding: 25px;
-	box-shadow: 0px 5px 32px -6px #aaa;
-	border-radius: 10px;
+	padding: 36px 28px;
 	background: #111 url('./img/mhp3rd/hero-wp-2.jpg') no-repeat center center;
 	background-size: cover;
 	color: #FFF;
-	margin-bottom: 35px;
+	margin-bottom: 18px;
 	position: relative;
 	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-flow: row nowrap;
 
 	&:after {
 		content: "";
 		position: absolute;
 		top: 0; bottom: 0;
 		left: 0; right: 0;
-		background-color: #111;
-		opacity: 0.45;
+		background-color: #334038;
+		opacity: 0.75;
 		z-index: -1;
-		border-radius: 10px;
 	}
 
 	header {
 		color: #FFF;
+		font-size: 23px;
+		text-shadow: 0px 2px 10px #111;
+		letter-spacing: 1.55px;
+		max-width: 55%;
+		padding-bottom: 0px; 
 	}
 
 	.latest-rls {
-		color: #7cdcf7;
+		color: #ffeb43;
 		border: solid thin;
-		padding: 18px 32px;
+		padding: 14px 24px;
 		border-radius: 5px;
 		font-family: $fontHeavy;
 		font-size: 12px;
@@ -521,20 +551,6 @@ main.page-content {
 .page-content {
 	position: relative;
 
-	&::after, 
-	&::before {
-		content: "";
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 70px 0 0px 70px;
-		border-color: transparent transparent transparent #ffffff;
-		position: absolute;
-		top: -70px;
-		left: 0px;
-		z-index: 5;
-	}
-
 	&::before {
 		border-width: 85px 0px 0px 85px;
 		top: -85px;
@@ -552,9 +568,34 @@ main.page-content {
 	font-family: $fontSerif;
 }
 
+.trailer-thumbnail {
+	background: url('./img/mhp3rd/hero-wp.jpg') no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	min-height: 270px;
+	display: block;
+	text-indent: -999999px;
+	margin-top: 18px;
+    margin-bottom: 36px;
+	position: relative;
+}
+
 #top-header {
 	z-index: 5;
 	position: relative;
+
+	.logo-top {
+		max-width: 360px;
+		margin: auto;
+		display: block;
+		text-indent: -999999px;
+
+		img {
+			display: block;
+			max-width: 100%;
+			margin: auto;
+		}
+	}
 
 	.dropdown-wrapper {
 		text-align: center;
@@ -667,16 +708,6 @@ main.page-content {
     	}
 	}
 
-	.slogan {
-		font-weight: bolder;
-		font-size: 45px;
-		position: relative;
-		color: #ffffff;
-		text-shadow: -3px 0px 1px #4fbbea;
-
-		
-	}
-
 	.back {
 		position: relative;
 		z-index: -4;
@@ -769,8 +800,8 @@ main.page-content {
 	position: relative;
 	z-index: 2;
 	text-align: center;
-	padding-top: 105px;
-	padding-bottom: 85px;
+	padding-top: 65px;
+	padding-bottom: 45px;
 
 	.preview-item-container {
 		width: 30%;
@@ -860,9 +891,7 @@ main.page-content {
 }
 
 .hero__btn_ctr {
-	margin: 5px auto;
 	text-align: left;
-	padding: 20px 10px;
 }
 
 #top-header .hero__container {
@@ -948,19 +977,20 @@ main.page-content {
 	display: flex;
 	align-items: flex-start;
 	align-content: flex-start;
+	justify-content: center;
 
 	.col {
 		width: 50%;
 		box-sizing: border-box;
-		padding: 18px;
-		margin: 0px auto;
+		margin: 0px 0px;
 
 		&.large {
-			width: 62%;
+			width: auto;
+			margin-right: 24px;
 		}
 
 		&.small {
-			width: 38%;
+			width: 480px;
 		}
 	}
 }
@@ -1023,20 +1053,21 @@ main.page-content {
 
 .contact {
 	text-align: center;
-    padding: 32px 15px 50px;
+    padding: 48px 15px 62px;
     font-weight: bolder;
     text-transform: uppercase;
     margin: auto 0px auto auto;
-    color: #111;
-	background-color: #FFF;
-	
+	color: #FFF;
+	background: url('./img/footer-contact.jpg') no-repeat center center;
+	background-size: cover;
+	background-color: #F4f4f4;
 	$color: #7dd04c;
 	$color-dark: #2b5f0c;
 
 	.inner-content {
 		max-width: 720px;
 		text-align: left;
-		margin: auto 16px auto 48px;
+		margin: auto auto auto auto;
 	}
 
 	img {
@@ -1048,10 +1079,11 @@ main.page-content {
 		padding: 5px 0px 20px;
 		font-family: $fontHeavy;
 		letter-spacing: 1.75px;
+		text-shadow: -2px 0px 1px #2b5f0c;
 
 		p {
 			margin-top: 12px;
-
+			
 			&:nth-of-type(1) {
 				font-size: 48px;
 			}
@@ -1063,11 +1095,13 @@ main.page-content {
 	}
 
 	.subtitle {
-		margin-bottom: 20px;
+		margin-bottom: 12px;
 		font-size: 14px;
-		font-family: $fontNormal;
-		font-weight: normal;
+		font-family: $fontHeavy;
 		letter-spacing: 1.25px;
+		color: #FFF;
+		font-weight: bolder;
+		text-shadow: 0px 0px 20px #111;
 	}
 
 	hr {
@@ -1087,16 +1121,17 @@ main.page-content {
 	}
 
 	.email-link {
-		border: solid thin;
-		color: $color-dark;
-		padding: 18px 32px;
+		border: none;
+		padding: 18px 12px;
 		font-weight: bolder;
 		letter-spacing: 1.25px;
 		border-radius: 2px;
 		font-size: 14px;
 		margin: auto 0px;
-
-		font-family: $fontHeavy;
+		color: $color;
+		font-family: "Barlow", sans-serif;
+		text-shadow: 0px 2px 5px #111;
+		border-bottom: solid 4px;
 	}
 }
 
@@ -1219,8 +1254,8 @@ main.page-content {
 		z-index: 1;
 		display: inline-block;
 		margin: 15px auto 25px;
-
 		text-shadow: -2px 0px 12px #111;
+		
 
 	}
 
@@ -1570,10 +1605,9 @@ main.page-content {
 .box__content_wrapper {
 
 	.text__cont {
-		max-width: 720px;
 		position: relative;
 		z-index: 2;
-		padding: 15px 15px;
+		padding: 15px 0px;
 
 		&.post__releases {
 			padding: 25px 10px;

@@ -1,25 +1,25 @@
+{% if page.layout == 'home' %}
 <script src = "./assets/frontend/assets/lib/home-dropdown.js">
 </script>
+{% endif %}
 
 <section id="top-header">
 
     <navbar id = "navbar-root" class = "home"></navbar>
 
+	{% if page.layout == 'home' %}
 	<div id="main-center-inner-wrapper">
+		<h2 class = "slogan large">Monster Hunter</h2>
+		<h2 class = "slogan">
+			HD Texture Pack
+		</h2>
 
 		<div class="main-center-content-wrapper">
-
-			<h1 class="slogan main">
-				Monster Hunting Redux.
-			</h1>
-
-			<h1 class="slogan back">
-				HD Texture Pack.
-            </h1>
             
 		    <div class = "dropdown"></div>
 
 		</div>
 	</div>
+	{% endif %}
 
 </section>

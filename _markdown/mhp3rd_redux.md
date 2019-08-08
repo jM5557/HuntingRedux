@@ -12,9 +12,9 @@ largeImg: 'mhp3rd/screens-3.png'
 ---
 
 <section class = "main-wrapper">
-	<div class = "text-container">
+	<div class = "sect text-container">
 		<div class = "row-items col-2">
-			<section class="sect install col large">
+			<section class="install col large">
 				
 				<div class="game-panel">
 					<header>
@@ -27,10 +27,6 @@ largeImg: 'mhp3rd/screens-3.png'
 							Download Latest Release
 						</a>
 
-						<a href = "https://youtube.com/" class = "btn clear">		
-							Watch the Trailer
-						</a>
-
 					</div>
 				</div>
 				
@@ -39,7 +35,11 @@ largeImg: 'mhp3rd/screens-3.png'
 
 			</section>
 
-			<section class = 'sect col small'>
+			<section class = 'col small'>
+				<header>Showcase Trailer</header>
+				<a href = "https://youtube.com" class = "trailer-thumbnail">
+					<div class = "play-btn">Watch Now</div>
+				</a>
 
 				{% include controller_setup.html %}
 				
