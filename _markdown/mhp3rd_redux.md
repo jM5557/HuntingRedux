@@ -33,23 +33,28 @@ largeImg: 'mhp3rd/screens-3.png'
 				
 				{% include installation.html gameSubname = page.gameSubname gameReleaseName = page.gameReleaseName %}
 
+<div class = "panel-item" markdown = "1">
+{% include controller_setup.md %}
+</div>
+
 			</section>
 
 			<section class = 'col small'>
-				<header>Showcase Trailer</header>
-				<a href = "https://youtube.com" class = "trailer-thumbnail">
-					<div class = "play-btn">Watch Now</div>
-				</a>
 
-				{% include controller_setup.html %}
+				<div class = "panel-item">
+					<a href = "https://youtube.com" class = "trailer-thumbnail">
+						<p>Showcase Trailer</p>
+						<div class = "play-btn"></div>
+					</a>
+				</div>
+
 				
+<section id = 'gallery' class="mhp3rd">
+	{% include gallery.html game = page.latestGame %}
+</section>
 			</section>
 		</div>
 	</div>
-</section>
-
-<section id = 'gallery' class="mhp3rd">
-	{% include gallery.html game = page.latestGame %}
 </section>
 
 <script src = "./../assets/frontend/assets/lib/images.js">

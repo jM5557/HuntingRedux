@@ -7,6 +7,7 @@
 
 @import 'variables';
 @import 'mixins';
+@import 'animations';
 
 body, html {
 	width: 100%;
@@ -82,6 +83,19 @@ header,
 		left: -10px;
 		top: -5px;
 		z-index: -1;
+	}
+}
+
+.content-wrapper {
+	max-width: 1440px;
+	margin: auto;
+
+	&.mid {
+		max-width: 900px;
+	}
+
+	&.small {
+		max-width: 640px;
 	}
 }
 
@@ -162,20 +176,6 @@ header,
 			animation: slideInRight 0.72s 1;
 			background-color: #ffeb43;
 			padding: 15px;
-
-			@keyframes slideInRight {
-				from {
-					transform: translateX(720px);
-				}
-
-				64%, 80% {
-					transform: translateX(20px);
-				}
-
-				72%, to {
-					transform: translateX(0px);
-				}
-			}
 
 			a, a:visited, a:link {
 				display: block;
@@ -277,6 +277,8 @@ header,
 		border: solid thin;
 		box-shadow: 0px 3px 25px -5px #131313;
 		text-shadow: -1px 2px 15px #111;
+		margin-right: 20px;
+		position: relative;
 		
 		&:after {
 			content: "";
@@ -292,7 +294,7 @@ header,
 			position: absolute;
     		top: 52%;
     		transform: translateY(-50%);
-    		right: 48px;
+    		right: 20px;
 		}
 
 		@media all and (max-width: $breakpoint__mobile_header) {
@@ -387,9 +389,8 @@ header,
 
 .text-container p, .text_content {
 	font-size: 15px;
-	letter-spacing: 1.15px;
-	line-height: 24px;
-	margin-bottom: 10px;
+	line-height: 19px;
+	margin-bottom: 8px;
 	font-family: $fontNormal;
 }
 
@@ -506,6 +507,8 @@ header,
 	align-items: center;
 	flex-flow: row nowrap;
 
+	border-radius: $large-item-b-r;
+
 	&:after {
 		content: "";
 		position: absolute;
@@ -514,6 +517,7 @@ header,
 		background-color: #334038;
 		opacity: 0.75;
 		z-index: -1;
+		border-radius: $large-item-b-r;
 	}
 
 	header {
@@ -569,15 +573,81 @@ main.page-content {
 }
 
 .trailer-thumbnail {
-	background: url('./img/mhp3rd/hero-wp.jpg') no-repeat center center;
+	background: #111 url('./img/mhp3rd/hero-wp.jpg') no-repeat center bottom 0px;
 	background-size: cover;
-	width: 100%;
-	min-height: 270px;
 	display: block;
-	text-indent: -999999px;
-	margin-top: 18px;
-    margin-bottom: 36px;
+	margin-top: auto;
+	margin-bottom: 18px;
+	padding: 24px 18px 18px;
 	position: relative;
+	border-radius: 3px;
+	color: #FFF;
+	font-weight: bolder;
+	text-transform: uppercase;
+	
+	p {
+		font-family: $fontHeavy;
+		font-size: 24px;
+		line-height: unset;
+		text-shadow: 0px 0px 14px #111;
+	}
+
+	.play-btn {
+		top: 0;
+		right: 0;
+		left: auto;
+		bottom: 0;
+		width: 75px;
+		background-size: 20px;
+	}
+
+}
+
+.panel-item {
+	h1, h2, h3, h4, h5, h6 {
+		font-size: 24px;
+		padding: 0px 0px 0px;
+		position: relative;
+		z-index: 1;
+		text-transform: uppercase;
+		margin: 10px auto;
+		color: #312e38;
+		text-shadow: -2px 0px 1px #4eb8e6;
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 28px;
+		text-align: left;
+	}
+
+	margin-bottom: 15px;
+
+	ul {
+		list-style-type: none;
+
+		li {
+			position: relative;
+			padding: 10px 14px 10px 21px;
+
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0px;
+				top: 0;
+				bottom: 0;
+				height: 7px;
+				width: 7px;
+				background-color: $colorBlack;
+				margin: auto;
+				transform: rotate(45deg);
+			}
+		}
+	}
 }
 
 #top-header {
@@ -990,7 +1060,7 @@ main.page-content {
 		}
 
 		&.small {
-			width: 480px;
+			max-width: 480px;
 		}
 	}
 }
@@ -1065,9 +1135,11 @@ main.page-content {
 	$color-dark: #2b5f0c;
 
 	.inner-content {
-		max-width: 720px;
+		max-width: 1440px;
 		text-align: left;
 		margin: auto auto auto auto;
+		box-sizing: border-box;
+		padding-left: 45px;
 	}
 
 	img {
@@ -1128,10 +1200,9 @@ main.page-content {
 		border-radius: 2px;
 		font-size: 14px;
 		margin: auto 0px;
-		color: $color;
+		background-color: $color;
+		color: $color-dark;
 		font-family: "Barlow", sans-serif;
-		text-shadow: 0px 2px 5px #111;
-		border-bottom: solid 4px;
 	}
 }
 
@@ -1146,11 +1217,10 @@ main.page-content {
 	    line-height: 1.15rem;
 	    letter-spacing: 1.15px;
 	    margin: auto auto auto;
-	    padding: 96px 15px 32px;
+	    padding: 64px 15px 32px;
 	    text-align: center;
 		font-weight: bolder;
 		max-width: 550px;
-		margin-right: 0px;
 		text-align: left;
 	}
 
@@ -1230,6 +1300,54 @@ main.page-content {
 	}
 }
 
+.gallery {
+
+	.gallery-thumbnail {
+		height: 160px;
+		width: 160px;
+		overflow: hidden;
+		position: relative;
+		background-color: #111;
+		display: inline-block;
+		margin: 2.5px 2.5px;
+		transition: transform 0.2s ease;
+		box-shadow: 0px 4px 24px -6px #4a200d;
+		
+		img {
+			height: 100%;
+			cursor: pointer;
+			position: absolute;
+			left: -100px;
+		}
+
+		&:hover {
+			opacity: 0.70;
+			z-index: 10;
+			box-shadow: 0px 5px 35px -8px #111;
+		}
+
+		@media all and (max-width: $breakpoint__mobile) {
+			display: block;
+			width: 95%;
+			height: 160px;
+			margin: 5px auto;
+
+			img {
+				width: 100%;
+				height: auto;
+				top: 0px;
+				left: 0px;
+			}
+
+			&:hover {
+				transform: scale(1.02);
+				z-index: 10;
+				box-shadow: 0px 5px 45px -8px #111;
+			}
+		}
+	}
+}
+
 #gallery {
 	text-align: center;
 	background: #4a200d 
@@ -1238,9 +1356,15 @@ main.page-content {
 	padding: 20px 25px 55px;
 
 	.gallery__cont {
-		max-width: 720px;
-		margin: auto auto auto 5%;
-		padding: 35px 10px;
+		max-width: 1440px;
+		margin: auto auto auto auto;
+		padding: 35px 15px;
+		text-align: left;
+
+		.gallery {
+			max-width: 720px;
+			margin: auto auto auto 0px;
+		}
 	}
 
 	.heading {
@@ -1253,7 +1377,7 @@ main.page-content {
 		position: relative;
 		z-index: 1;
 		display: inline-block;
-		margin: 15px auto 25px;
+		margin: 15px auto 15px;
 		text-shadow: -2px 0px 12px #111;
 		
 
@@ -1263,6 +1387,22 @@ main.page-content {
 		background: #4a200d 
 		url(#{$imgPath + $latestGame + "/large-bg-2.png"}) no-repeat bottom right 0px;
 		background-size: cover;
+		padding: 5px 5px 45px;
+		border-radius: $large-item-b-r;
+
+		.gallery__cont {
+			text-align: center;
+			padding: 5px 5px;
+		}
+
+		.gallery-thumbnail {
+			width: 80px;
+			height: 80px;
+
+			img {
+				left: 0px;
+			}
+		}
 	}
 }
 
@@ -1714,54 +1854,6 @@ main.page-content {
     display: none;
 }
 
-.gallery {
-
-	.gallery-thumbnail {
-		height: 160px;
-		width: 160px;
-		overflow: hidden;
-		position: relative;
-		background-color: #111;
-		display: inline-block;
-		margin: 2.5px 2.5px;
-		transition: transform 0.2s ease;
-		box-shadow: 0px 4px 24px -6px #4a200d;
-		
-		img {
-			height: 100%;
-			cursor: pointer;
-			position: absolute;
-			left: -100px;
-		}
-
-		&:hover {
-			opacity: 0.70;
-			z-index: 10;
-			box-shadow: 0px 5px 35px -8px #111;
-		}
-
-		@media all and (max-width: $breakpoint__mobile) {
-			display: block;
-			width: 95%;
-			height: 160px;
-			margin: 5px auto;
-
-			img {
-				width: 100%;
-				height: auto;
-				top: 0px;
-				left: 0px;
-			}
-
-			&:hover {
-				transform: scale(1.02);
-				z-index: 10;
-				box-shadow: 0px 5px 45px -8px #111;
-			}
-		}
-	}
-}
-
 .overlay__wrapper {
 	
 	&, .overlay__screen {	
@@ -1890,8 +1982,15 @@ main.page-content {
 
 .video-gallery-wrapper {
 	
-	padding: 25px 10px 75px 120px;
+	padding: 25px 20px 75px 20px;
 	position: relative;
+
+	.videos-list {
+		display: flex;
+		justify-content: flex-start;
+		flex-flow: row nowrap;
+		position: relative;
+	}
 
 	&:before {
 		content: "";
@@ -1906,12 +2005,12 @@ main.page-content {
 	.controls-wrapper {
 		font-family: $fontNormal;
 		font-weight: bolder;
+		position: -webkit-sticky;
+  		position: sticky;
+		top: 25px;		
 		text-align: right;
-		text-transform: lowercase;
-		position: absolute;
 		left: 0px;
-		top: 55px;
-		text-align: right;
+		margin-right: 25px;
 
 		button {
 			font-family: $fontHeavy;
@@ -2003,16 +2102,6 @@ main.page-content {
 	
 	img {
 		animation: fadeIn 0.75s forwards 1;
-
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-			}
-
-			to {
-				opacity: 1;
-			}
-		}
 	}
 
 	.side-by-side {
