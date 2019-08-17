@@ -124,7 +124,7 @@ header,
 	font-family: $fontSerif;
     text-align: left;
 
-	.nav__link_wrapper {
+	#nav-menu {
 		margin-left: 15px;
 
 		a {
@@ -162,6 +162,15 @@ header,
 		}
 
 		@media all and (max-width: $breakpoint__mobile_header) {
+
+			&.OPEN {
+				display: block;
+			}
+
+			&.CLOSED {
+				display: none;
+			}
+
 			position: fixed;
 			top: 25px;
 			max-width: 540px;
@@ -202,6 +211,16 @@ header,
 		}
 	}
 
+	.close-btn {
+		border: none;
+		font-size: 14px;
+		text-transform: lowercase;
+		font-weight: bolder;
+		padding: 12px;
+		display: block;
+		margin-right: 0px;
+	}
+
 	#logo-top {
 		background: url(#{$imgPath + $logoBlack}) no-repeat center center;
 		background-size: contain;
@@ -230,19 +249,26 @@ header,
 		display: inline-block;
 		vertical-align: middle;
 		margin: auto 12px;
-		display: none;
 		background-color: transparent;
 		cursor: pointer;
 		vertical-align: middle;
 		border: solid thin #ffeb43;
 		text-indent: -99999999px;
+	}
+
+	.menu-btn {
+		display: none;
 
 		@media all and (max-width: $breakpoint__mobile_header) {
 			display: inline-block;
+
+			&.close-btn {
+				display: block;
+			}
 		}
 	}
 
-	.nav__link_wrapper,
+	#nav-menu,
 	#logo-top {
 		display: inline-block;
 		vertical-align: middle;
@@ -692,7 +718,7 @@ main.page-content {
 			text-transform: uppercase;
 		}
 
-		.selected_item {
+		.selected-item {
 			color: #4fbbea;
 			padding: 18px 32px;
 			font-family: $fontHeavy;
@@ -710,14 +736,14 @@ main.page-content {
 			}
 		}
 
-		.options-list {
-			display: block;
+		.item-list {
+			display: none;
 			box-sizing: border-box;
 			background-color: #1b4067;
 			position: absolute;
 			top: 0px;
-			width: 45%;
-			left: 50%;
+			width: 100%;
+			left: 0;
 			margin: auto;
 			z-index: 5;
 			animation: fadeIn 0.32s forwards;

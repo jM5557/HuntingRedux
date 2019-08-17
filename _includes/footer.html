@@ -47,11 +47,10 @@
 
 <Link rel = "stylesheet" type = "text/css" href = "/assets/frontend/static/css/main.a0f67097.chunk.css" />
 
-{% for script in site.static_files %}
-	{% if script.path contains 'static/js' %}
-		{% unless script.path contains 'map' %}
-			<script src="{{ site.baseurl }}{{ script.path }}">
-			</script>
-		{% endunless %}
-    {% endif %}
-{% endfor %}
+<script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+
+<script src="./../assets/js/main.js">
+</script>

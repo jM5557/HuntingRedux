@@ -2,5 +2,16 @@
 	<h2 class = "heading">Screenshots</h2>
 
 	<div id = "gallery-root">
+		<div class = "gallery">
+		{% for image in site.static_files %}
+			{% if image.path contains 'img/mhp3rd/gallery' %}
+				{% unless image.path contains 'b' %}
+				<div class = "gallery-thumbnail">
+					<img alt = "screenshot" src="{{ site.baseurl }}{{ image.path }}" />
+				</div>
+				{% endunless %}
+			{% endif %}
+		{% endfor %}
+		</div>
 	</div>
 </div>
