@@ -80,7 +80,7 @@ previewItems:
 				<div class = "box-item">
 					<h2>Requirements</h2>
 					<ul>
-						<li>PPSSPP Emulator <a class = "ppsspp-link" href = "https://ppsspp.org">Download Now</a></li>
+						<li>PPSSPP Emulator <a class = "download link ppsspp" href = "https://ppsspp.org">Download Now</a></li>
 						<li>Monster Hunter Portable 3rd ISO</li>
 					</ul>
 				</div>

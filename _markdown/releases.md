@@ -7,13 +7,13 @@ permalink: "/releases/"
 ---
 
 <div class="main-wrapper">
-	<section class="sect box__content_wrapper releases">
+	<section class="sect box_content_wrapper releases">
 
 		<header>
 			Latest Releases
 		</header>
 			
-		<div class="post__releases box__content text__cont">
+		<div class="post__releases box_content text_content_wrapper">
 			
 			{% for post in site.posts %}
 			  <article class = "post__release">

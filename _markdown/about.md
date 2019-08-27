@@ -7,13 +7,13 @@ permalink: "/about/"
 <div class="main-wrapper">
 	<div class = "main-content sect text-container sub__details_wrapper">
 		<div class = "row-items">
-			<div class = "sub__details box__content_wrapper">
+			<div class = "sub__details box_content_wrapper">
 				<header>
 					<span class="bar__under"></span>
 					About Our Project
 				</header>
 
-				<div  class = "text__cont box__content">
+				<div  class = "text_content_wrapper box_content">
 
 				<p>
 					Hunting REDUX is a passion project aiming to enhance older Monster Hunter titles. 
@@ -40,12 +40,12 @@ permalink: "/about/"
 				</div>
 			</div>
 
-			<div class="sub__details box__content_wrapper">
+			<div class="sub__details box_content_wrapper">
 				<header>
 					The Team
 				</header>
 
-				<ul class = "text__cont box__content team">
+				<ul class = "text_content_wrapper box_content team">
 					
 					<li>
 						<h2>Icewind</h2>
@@ -68,7 +68,7 @@ permalink: "/about/"
 			</div>
 		</div>
 
-		<div class = "sub__details box__content_wrapper"> 
+		<div class = "sub__details box_content_wrapper"> 
 
 			<header>
 				<span class="bar__under"></span>
@@ -79,7 +79,7 @@ permalink: "/about/"
 				Hunters & Communities who we've encountered throughout our journey...
 			</p>
 
-			<ul class = "text__cont box__content special-thanks">
+			<ul class = "text_content_wrapper box_content special-thanks">
 
 				<li>MHVuze</li>
 

@@ -1,0 +1,196 @@
+.get_mhfu_ios {
+	background: url($imgPath + 'wp-large.jpg') no-repeat center center;
+	background-size: cover;
+	background-color: #333;
+	padding: 25px 20px;
+	text-align: center;
+	display: block;
+	max-width: 100%;
+	z-index: 10;
+	position: relative;
+
+	@include darkOverlay();
+
+	img	{
+		max-width: 250px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	#get-link-ctr {
+		
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+
+		a {
+			display: block;
+			margin: auto;
+		}
+
+		#get-ios {
+			border-radius: 1px;
+			background-color: transparent;
+			color: #fff;
+			font-family: $fontHeavy;
+			font-weight: bolder;
+			font-size: 2rem;
+			padding: 16px 20px;
+			border: none;
+			letter-spacing: 2.5px;
+			text-shadow: -3px 0px 1px #89b741; 
+			width: 300px;
+		}
+
+		#get-vita {
+			font-size: 1.05rem;
+		    color: #111;
+		    font-family: "Crimson Text", serif;
+		    letter-spacing: 2.5px;
+		    padding: 8px 6px;
+		    max-width: 65%;
+		    color: #FFF;
+		}
+	}
+}
+
+.social-links {
+    padding: 16px 0px 0px;
+    text-align: left;
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        color: $colorWhite;
+        margin: 10px 10px 10px 0px;
+        background-color: #111;
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+    }
+
+    .twitter {
+        background: #111 url("./../../assets/img/twitter-logo.png") no-repeat center center;
+        background-size: contain;
+    }
+
+    .discord {
+        background: #111 url("./../../assets/img/discord-logo.png") no-repeat center center;
+        background-size: 85% auto;
+    }
+
+    .youtube {
+        background: #111 url("./../../assets/img/yt__icon.png") no-repeat center center;
+        background-size: 65% auto;
+    }
+
+    span {
+        display: none;
+    }
+
+
+}
+
+.contact {
+	text-align: center;
+    padding: 48px 15px 62px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: auto 0px auto auto;
+	color: #FFF;
+	background: url('./img/footer-contact.jpg') no-repeat center center;
+	background-size: cover;
+	background-color: #F4f4f4;
+	$color: #7dd04c;
+	$color-dark: #2b5f0c;
+
+	.inner-content {
+		max-width: 1440px;
+		text-align: left;
+		margin: auto auto auto auto;
+		box-sizing: border-box;
+		padding-left: 45px;
+	}
+
+	img {
+		max-width: 240px;
+	}
+
+	h2 {
+		font-size: 28px;
+		padding: 5px 0px 20px;
+		font-family: $fontHeavy;
+		letter-spacing: 1.75px;
+		text-shadow: -2px 0px 1px #2b5f0c;
+
+		p {
+			margin-top: 12px;
+			
+			&:nth-of-type(1) {
+				font-size: 48px;
+			}
+
+			&:nth-of-type(2) {
+				color: $color;
+			}
+		}
+	}
+
+	.subtitle {
+		margin-bottom: 12px;
+		font-size: 14px;
+		font-family: $fontHeavy;
+		letter-spacing: 1.25px;
+		color: #FFF;
+		font-weight: bolder;
+		text-shadow: 0px 0px 20px #111;
+	}
+
+	hr {
+		display: block;
+		max-width: 64px;
+		background-color: #c1d2ff;
+		height: 20px;
+		margin: 15px auto 20px;
+		border: none;
+	}
+
+	.email-link {
+        display: inline-block;
+        border: none;
+        padding: 18px 12px;
+        font-weight: bolder;
+        letter-spacing: 1.25px;
+        border-radius: 6px;
+        font-size: 14px;
+        margin: auto 0px;
+        background-color: #111;
+        color: #FFF;
+		font-family: "Barlow", sans-serif;
+	}
+}
+
+.page_footer {
+	background-color: $colorBlack;
+	color: $colorWhite;
+	position: relative;
+	z-index: 5;
+
+	.notice {
+		font-size: 11px;
+	    line-height: 1.15rem;
+	    letter-spacing: 1.15px;
+	    margin: auto auto auto;
+	    padding: 64px 15px 32px;
+	    text-align: center;
+		font-weight: bolder;
+		max-width: 550px;
+		text-align: left;
+	}
+
+	@media all and (max-width: $breakpoint__mobile_header) {
+		.notice { text-align: left; }
+
+
+	}
+}

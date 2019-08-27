@@ -1,0 +1,29 @@
+{
+  "name": "huntingredux",
+  "version": "1.0.0",
+  "description": "Static site for HuntingRedux Monster Hunter remastering project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jM5557/HuntingRedux.git"
+  },
+  "keywords": [
+    "monster",
+    "hunter",
+    "mhp3rd",
+    "huntingredux"
+  ],
+  "author": "HuntingRedux",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jM5557/HuntingRedux/issues"
+  },
+  "homepage": "https://github.com/jM5557/HuntingRedux#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  }
+}

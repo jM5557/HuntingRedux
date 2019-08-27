@@ -46,3 +46,14 @@
 		width: 100px;
 	}
 }
+
+@mixin rightCaret {
+	border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid;
+	display: inline-block;
+	vertical-align: middle;
+    height: 0;
+    opacity: 1;
+    width: 0;
+}

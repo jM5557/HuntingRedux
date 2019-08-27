@@ -11,11 +11,13 @@ gameReleaseName: mhp3rd
 largeImg: 'mhp3rd/screens-3.png'
 
 requirements:
- - title: PPSSPP [Download Now](https://ppsspp.org)
+ - title: PPSSPP
+   link: https://ppsspp.org
    desc: HuntingRedux is exclusively compatible with PPSSPP emulation software.
- - title: Monster Hunter Portable 3rd HD Ver. ISO/ROM **English Patched**
-   desc: We do NOT provide instructions on how to illegally obtain a copy of the game. We recommend doing some research on how to legally rip your copy of the game.
- - title: 7-zip [Download Now](https://www.7-zip.org/)
+ - title: Monster Hunter Portable 3rd HD Ver. ISO/ROM
+   desc: We do **NOT** provide instructions on how to illegally obtain a copy of the game.
+ - title: 7-zip
+   link: https://www.7-zip.org/
    desc: We recommend 7-zip to extract any downloadable zip files that we provide as part of our releases.
 ---
 
@@ -40,15 +42,28 @@ requirements:
 
 <div class = "panel-item">
 <h1>Requirements</h1>
-{% for requirement in page.requirements %}			
-<details>
-	<summary>
-		{{ requirement.title | markdownify }}
-	</summary>
 
-	{{ requirement.desc }}
-</details>
+{% for requirement in page.requirements %}			
+<div class = "item">
+	<div class = "title">
+		<div>
+			{{ requirement.title }}
+		</div>
+
+		{% if requirement.link %}
+			<a href = "{{requirement.link}}" class = "download link">
+				Download Now
+			</a>
+		{% endif %}
+
+	</div>
+
+	<div class = "content">
+		{{ requirement.desc | markdownify }}
+	</div>
+</div>
 {% endfor %}
+
 </div>	
 				{% include installation.html gameSubname = page.gameSubname gameReleaseName = page.gameReleaseName %}
 
@@ -75,7 +90,4 @@ requirements:
 		</div>
 	</div>
 </section>
-
-<script src = "./../assets/frontend/assets/lib/images.js">
-</script>
 

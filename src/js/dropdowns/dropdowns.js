@@ -1,19 +1,3 @@
-$(document).ready(function(){
-
-    // toggable content
-    $(".toggable").click(function (event) {
-        event.stopPropagation();
-        $(".content", this).toggleClass('visible');
-    })
-
-});
-// Header/Navbar
-var navbarDefaultState = 'CLOSED';
-
-$("#menu-btn, #close-menu").click(function () { 
-    navbarDefaultState = (navbarDefaultState === 'OPEN') ? 'CLOSED' : 'OPEN';
-    $("#nav-menu").attr('class', navbarDefaultState);
-});
 class Dropdown {
     constructor(root, items) {
         this.root = root;
