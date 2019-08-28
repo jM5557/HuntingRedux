@@ -5,96 +5,92 @@ permalink: "/about/"
 ---
 
 <div class="main-wrapper">
-	<div class = "main-content sect text-container sub__details_wrapper">
-		<div class = "row-items">
-			<div class = "sub__details box_content_wrapper">
-				<header>
-					<span class="bar__under"></span>
-					About Our Project
-				</header>
+	<div class = "sect">
+		<div class = "col-2">
+			<div class = "col large">
+				<div class = "panel-item box_content_wrapper">
+					<header>
+						<span class="bar__under"></span>
+						About Our Project
+					</header>
+					<div class = "box_content text_content_wrapper">
+						<p>
+							Hunting REDUX is a passion project aiming to enhance older Monster Hunter titles.
 
-				<div  class = "text_content_wrapper box_content">
+							Our main goal is to transform already stunning games into experiences still visually enjoyable today. 
 
-				<p>
-					Hunting REDUX is a passion project aiming to enhance older Monster Hunter titles. 
-				</p>
+							The core of our project focuses on major texture improvements by Icewind, but we have also exclusively remastered several cinematics across the older titles. 
+								<br />
+								<br />		
+							Our first project, <i>Monster Hunter Portable 3rd Redux</i>, features a wholescale redesign, from monsters to the UI. 
+								<br />
+							Texture Packs are planned and released in stages as development progresses. Afterwards, we plan to continually support completed projects through seasonal updates and events. 
+								<br />
+							We hope you look forward to it.  
 
-				<p>
-					Our main goal is to transform already stunning games into experiences still visually enjoyable today. 
-				</p>
-
-				<p>
-					The core of our project focuses on major texture improvements by Icewind, but we have also exclusively remastered several cinematics across the older titles. 
-						<br />
-						<br />		
-					Our first project, <i>Monster Hunter Portable 3rd Redux</i>, features a wholescale redesign, from monsters to the UI. 
-						<br />
-					Texture Packs are planned and released in stages as development progresses. Afterwards, we plan to continually support completed projects through seasonal updates and events. 
-						<br />
-					We hope you look forward to it.  
-				</p>
-
-				<p>
-					<i>MHP3rd Redux</i> Texture Packs can only be used with the PPSSPP Emulator, available on PC (Windows, MacOSX, Linux), Android, and iOS.
-				</p>
+							<i>MHP3rd Redux</i> Texture Packs can only be used with the PPSSPP Emulator, available on PC (Windows, MacOSX, Linux), Android, and iOS.
+						</p>
+					</div>
 				</div>
 			</div>
+			<div class = "col small"> 
 
-			<div class="sub__details box_content_wrapper">
-				<header>
-					The Team
-				</header>
+				<div class="panel-item">
+					<header>
+						The Team
+					</header>
 
-				<ul class = "text_content_wrapper box_content team">
-					
-					<li>
-						<h2>Icewind</h2>
-						<h3>Lead HuntingRedux Texture Artist</h3>
-					</li>
+					<ul class = "team">
+						
+						<li>
+							<div>Icewind</div>
+							<p>
+								Project Lead & Texture Artist
+							</p>
+						</li>
 
-					<li>
-						<h2>Raptorhunter6</h2>
-						<h3>Web Developer & Video Editor</h3>
-					</li>
+						<li>
+							<div>Raptorhunter6</div>
+							<p>
+								Web Developer
+							</p>
+						</li>
 
-					<li>
-						<h2>Hazmat</h2>
-						<h3>
-							HuntingRedux Texture Artist - Armors/Equipment
-						</h3>
-					</li>
+						<li>
+							<div>Hazmat</div>
+							<p>
+								Texture Artist - Armors/Equipment
+							</p>
+						</li>
 
-				</ul>
+					</ul>
+				</div>
+				<div class = "panel-item">	
+					<header>
+						Special Thanks
+					</header>
+
+					<p class = "page_desc">
+						Hunters & Communities who we've encountered throughout our journey...
+					</p>
+
+					<ul class = "special-thanks">
+
+						<li>MHVuze</li>
+
+						<li>Regaru</li>
+
+						<li>daemon1</li>
+
+						<li>Zindea </li>
+
+						<li>MHWorld Modding Discord</li>
+
+						<li>PPSSPP's Official Discord</li>
+
+					</ul>
+				</div>
 			</div>
 		</div>
-
-		<div class = "sub__details box_content_wrapper"> 
-
-			<header>
-				<span class="bar__under"></span>
-				Special Thanks
-			</header>
-
-			<p class = "page_desc">
-				Hunters & Communities who we've encountered throughout our journey...
-			</p>
-
-			<ul class = "text_content_wrapper box_content special-thanks">
-
-				<li>MHVuze</li>
-
-				<li>Regaru</li>
-
-				<li>daemon1</li>
-
-				<li>Zindea </li>
-
-				<li>MHWorld Modding Discord</li>
-
-				<li>PPSSPP's Official Discord</li>
-
-			</ul>
-		</div>
-
 	</div>
 </div>

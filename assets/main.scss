@@ -171,7 +171,7 @@ strong {
 
 .item {
 
-	border-bottom: solid thin #111;
+	border-bottom: dashed thin #111;
 	padding: 20px 0px;
 
 	&:nth-last-of-type(1) {
@@ -263,13 +263,6 @@ strong {
 	}
 }
 
-#install_cont.box_content_wrapper {
-	.text_content_wrapper {
-		width: 100%;
-		max-width: unset;
-	}
-}
-
 .sect, .post__top_outer_content, .post {
 	padding: 15px 25px;
 	margin: auto auto auto 8%;
@@ -355,6 +348,15 @@ strong {
 	.clear {
 		text-shadow: 0px 0px 10px #111;
 	}
+
+	@media all and (max-width: $breakpoint__mobile) {
+		display: block;
+
+		.latest-rls {
+			display: table;
+			margin-top: 15px;
+		}
+	}
 }
 
 main.page-content {
@@ -382,7 +384,7 @@ main.page-content {
 }
 
 .trailer-thumbnail {
-	background: #111 url('./img/mhp3rd/hero-wp.jpg') no-repeat center bottom 0px;
+	background: #111 url('./img/mhp3rd/hero-wp.jpg') no-repeat center center;
 	background-size: cover;
 	display: block;
 	margin-top: auto;
@@ -445,7 +447,7 @@ main.page-content {
 
 	ul {
 		list-style-type: none;
-		padding-top: 15px;
+		padding-top: 5px;
 
 		li {
 			position: relative;
@@ -467,7 +469,16 @@ main.page-content {
 	}
 
 	p {
-		line-height: 20px;
+		line-height: 24px;
+	}
+}
+
+.team {
+	div {
+		font-family: $fontHeavy;
+		font-weight: bolder;
+		letter-spacing: 1.55px;
+		font-size: 24px;
 	}
 }
 
@@ -686,6 +697,9 @@ main.page-content {
 }
 
 .col-2 {
+	display: flex;
+	justify-content: center;
+	
 	.col {
 		display: inline-block;
 		vertical-align: top;
@@ -695,7 +709,7 @@ main.page-content {
 
 		&.large {
 			margin-right: 24px;
-			width: 55%;
+			width: 65%;
 		}
 
 		&.small {
@@ -703,6 +717,7 @@ main.page-content {
 			width: 30%;
 			position: sticky;
 			top: 10px;
+			align-self: flex-start;
 		}
 
 		@media all and (max-width: $breakpoint__mobile_header) {
@@ -716,6 +731,10 @@ main.page-content {
 				top: auto;
 			}
 		}
+	}
+
+	@media all and (max-width: $breakpoint__mobile_header) {
+		display: block;
 	}
 }
 
@@ -1000,7 +1019,7 @@ main.page-content {
 .boxed_text {
 
 	padding: 6px 6px;
-    border: solid thin #ea8658;
+    border: dashed thin #ea8658;
     box-shadow: 0px 2px 5px -2px #cdcdcd;
     margin-top: 10px;
     display: table;
@@ -1099,7 +1118,6 @@ main.page-content {
 }
 
 .box_content_wrapper {
-
 	.text_content_wrapper {
 		position: relative;
 		z-index: 2;
@@ -1134,12 +1152,11 @@ main.page-content {
 		
 		header {
 			font-size: 2.15rem;
-			margin-bottom: -16px;
 		}
 
 		.text_content_wrapper {
-			margin-left: 15px;
-			padding: 15px 10px;
+			padding: 15px 5px;
+			width: auto;
 		}
 	}
 }

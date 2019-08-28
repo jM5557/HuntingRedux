@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
+var babel = require('gulp-babel');
 
 var paths = {
     scripts: {
@@ -14,8 +15,16 @@ gulp.task('scripts', function() {
       .pipe(gulp.dest(paths.scripts.dest));
 });
 
+gulp.task('react', function () {
+    return gulp.src('src/components/**/*.js')
+        .pipe(babel({
+            preset: ['@babel/env', "@babel/react"]
+        }))
+        .pipe(gulp.dest(paths.scripts.dest));
+})
+
 gulp.task('watch', function () {
-   return gulp.watch(paths.scripts.src, gulp.series('scripts'));
+   return gulp.watch(paths.scripts.src, gulp.series('scripts', 'react'));
 });
 
 

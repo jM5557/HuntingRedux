@@ -15,10 +15,12 @@ requirements:
    link: https://ppsspp.org
    desc: HuntingRedux is exclusively compatible with PPSSPP emulation software.
  - title: Monster Hunter Portable 3rd HD Ver. ISO/ROM
-   desc: We do **NOT** provide instructions on how to illegally obtain a copy of the game.
+   desc: We do **NOT** provide instructions on how to illegally obtain a copy of the game. Please do not ask about how to pirate the game on our official channels.
  - title: 7-zip
    link: https://www.7-zip.org/
-   desc: We recommend 7-zip to extract any downloadable zip files that we provide as part of our releases.
+   desc: >
+          We recommend 7-zip to extract any downloadable zip files that we provide as part of our releases. 
+          <br> Any other zip extracting software works too.
 
 latestTrailer: m6guHcGEqX8
 ---

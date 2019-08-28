@@ -10,15 +10,15 @@ latestTrailerID: "wsGVYFBxY88"
 previewItems:
  - image: "screens-1.png"
    heading: "An Ecological Marvel."
-   subheading: "Past Monsters re-textured to stand more fearsome than ever before!"
+   subheading: "Monsters completely re-textured to appear more fearsome than ever before!"
    link: "/mhp3rd/monsters"
  - image: "screens-2.png"
    heading: "With All The Comforts Of Home."
-   subheading: "HD Yukumo Village is open to all hunters, from farm to faculties!"
+   subheading: "HD Yukumo Village has been fully furnished, from farm to faculties!"
    link: "/mhp3rd/village"
  - image: "screens-4.png"
    heading: "The Same Great Hunts."
-   subheading: "Vibrant visuals and UI redesign gives new life to the classic Monster Hunting experience!"
+   subheading: "HUD and visuals redesigned to give new life to the classic Monster Hunting experience!"
    link: "/mhp3rd/ui"
 
 ---

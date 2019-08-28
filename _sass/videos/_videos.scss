@@ -1,8 +1,14 @@
 .videos {
+
+	content {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-flow: row nowrap;
+	}
+
 	.page_desc {
-		width: 480px; 
-		display: inline-block;
-		vertical-align: top;
+		width: 480px;
 
 		.link-wrapper {
 			margin: 35px 0px;
@@ -10,14 +16,22 @@
 			border-radius: 3px;
 
 			a {
-				border: solid thin;
-				border-radius: 3px;
+				border-radius: 5px;
 				font-weight: bolder;
 				font-family: $fontHeavy;
 				padding: 8px 12px;
-				display: inline-block;
+				display: table;
 				color: #5e24ab;
 				font-size: 14px;
+				letter-spacing: 1.05px;
+				margin: 10px auto;
+				transition: background-color 0.10s,
+							color 0.10s;
+
+				&:hover {
+					background-color: #5e24ab;
+					color: #FFF;
+				}
 			}
 		}
 	}
@@ -29,14 +43,13 @@
 }
 
 .video-gallery-wrapper {
-	
-	padding: 25px 20px 25px 20px;
+	padding: 0px 20px 25px 15px;
 	position: relative;
 
 	.videos-list {
 		display: flex;
 		justify-content: flex-start;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 		position: relative;
 
 		.video-thumbnail {
@@ -55,7 +68,8 @@
     }
     
     .title {
-        margin-top: 10px;
+		margin-top: 10px;
+		line-height: 21px;
     }
 
     .category-list {
