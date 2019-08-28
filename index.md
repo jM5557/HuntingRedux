@@ -76,19 +76,14 @@ previewItems:
 				<button class="btn">Download Texture Pack</button>
 			</p>
 
-			
-				<div class = "box-item">
-					<h2>Requirements</h2>
-					<ul>
-						<li>PPSSPP Emulator <a class = "download link ppsspp" href = "https://ppsspp.org">Download Now</a></li>
-						<li>Monster Hunter Portable 3rd ISO</li>
-					</ul>
-				</div>
+			<div class = "box-item">
+				<h2>Requirements</h2>
+				<ul>
+					<li>PPSSPP Emulator <a class = "download link ppsspp" href = "https://ppsspp.org">Download Now</a></li>
+					<li>Monster Hunter Portable 3rd ISO</li>
+				</ul>
+			</div>
 		</div>
-
 	</div>
 
 </section>
-
-<script src = "./../assets/frontend/assets/lib/images.js">
-</script>

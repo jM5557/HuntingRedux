@@ -71,7 +71,7 @@ permalink: "/about/"
 					</header>
 
 					<p class = "page_desc">
-						Hunters & Communities who we've encountered throughout our journey...
+						Hunters & Communities who we've encountered during our quest...
 					</p>
 
 					<ul class = "special-thanks">

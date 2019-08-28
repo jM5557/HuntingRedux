@@ -29,24 +29,9 @@ permalink: "/videos/"
             
             <div id = "video-page-root">
 
-                <div class = "videos-list">
-                {% for video in site.data.videos.videos %}
-                    <div class = "video-thumbnail">
-                        <img 
-                            alt = "youtube thumbnail" 
-                            src = "https://img.youtube.com/vi/{{ video.id }}/0.jpg"
-                        />
-                        <p class = "title">{{ video.title }}</p>
-                        <div class = "category-list">
-                            {% for category in video.category %}
-                                <span class = "category">
-                                    {{ category }}
-                                </span>
-                            {% endfor %}
-                        </div>
-                    </div>
-                {% endfor %}
+                <div id = "videos-list">
                 </div>
+                
             </div>
         </div>
     </content>

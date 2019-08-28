@@ -2,23 +2,50 @@
     "videos": [
         {
             "id": "CMMYgeRRdI0",
-            "category": ["gameplay", "showcase"],
+            "category_ids": [1, 2],
             "title": "Monster Hunter World: Iceborne Brachydios Gameplay"
         },
         {
             "id": "9_bY_Xixc6w",
-            "category": ["intro"],
+            "category_ids": [3],
             "title": "Monster Hunter World: Iceborne Velkhana Beta"
         },
         {
             "id": "i6VlpRgMmP0",
-            "category": ["ecology", "cutscene"],
+            "category_ids": [4, 5],
             "title": "Monster Hunter World: Iceborne Trailer #4"
         },
         {
             "id": "WLHYku2wTSs",
-            "category": ["commercial"],
+            "category_ids": [6],
             "title": "Funny Monster Hunter World: Iceborne Commercial"
+        }
+    ],
+
+    "categories": [
+        { 
+            "id": 1, 
+            "text": "gameplay"
+        },
+        {
+            "id": 2,
+            "text": "showcase"
+        },
+        {
+            "id": 3,
+            "text": "intro"
+        },
+        {
+            "id": 4,
+            "text": "ecology"
+        },
+        {
+            "id": 5,
+            "text": "cutscene"
+        },
+        {
+            "id": 6,
+            "text": "commercial"
         }
     ]
 }
