@@ -7,13 +7,6 @@ $(document).ready(function(){
     })
 
 });
-// Header/Navbar
-var navbarDefaultState = 'CLOSED';
-
-$("#menu-btn, #close-menu").click(function () { 
-    navbarDefaultState = (navbarDefaultState === 'OPEN') ? 'CLOSED' : 'OPEN';
-    $("#nav-menu").attr('class', navbarDefaultState);
-});
 class Dropdown {
     constructor(root, items) {
         this.root = root;
@@ -55,18 +48,7 @@ class Dropdown {
 }
 
 class DropdownWithLinks extends Dropdown {
-    constructor (root) {
-        let items = [
-            {
-                text: "Google Drive 01",
-                link: "https://google.com"
-            },
-            {
-                text: "Google Drive 02",
-                link: "https://drive.google.com"
-            }
-        ];
-        
+    constructor (root, items) {
         super(root, items);
 
         $(root + " .download-link-a").prop("href", this.selectedItem.link);
@@ -85,5 +67,22 @@ class DropdownWithLinks extends Dropdown {
         });
     }
 }
+let headerDropdownItems = [
+    {
+        text: "Google Drive 01",
+        link: "https://google.com"
+    },
+    {
+        text: "Google Drive 02",
+        link: "https://drive.google.com"
+    }
+];
 
-new DropdownWithLinks('#top-header .dropdown');
+new DropdownWithLinks('#top-header .dropdown', headerDropdownItems);
+// Header/Navbar
+var navbarDefaultState = 'CLOSED';
+
+$("#menu-btn, #close-menu").click(function () { 
+    navbarDefaultState = (navbarDefaultState === 'OPEN') ? 'CLOSED' : 'OPEN';
+    $("#nav-menu").attr('class', navbarDefaultState);
+});

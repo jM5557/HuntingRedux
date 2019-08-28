@@ -19,6 +19,8 @@ requirements:
  - title: 7-zip
    link: https://www.7-zip.org/
    desc: We recommend 7-zip to extract any downloadable zip files that we provide as part of our releases.
+
+latestTrailer: m6guHcGEqX8
 ---
 
 <section class = "main-wrapper">
@@ -76,10 +78,10 @@ requirements:
 			<section class = 'col small'>
 
 				<div class = "panel-item">
-					<a href = "https://youtube.com" class = "trailer-thumbnail">
+					<div class = "trailer-thumbnail">
 						<p>Showcase Trailer</p>
-						<div class = "play-btn"></div>
-					</a>
+						<iframe src="https://www.youtube.com/embed/{{page.latestTrailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
 				</div>
 
 				

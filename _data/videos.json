@@ -1,0 +1,19 @@
+{
+    "videos": [
+        {
+            "id": "CMMYgeRRdI0",
+            "category": ["gameplay", "showcase"],
+            "title": "Monster Hunter World: Iceborne Brachydios Gameplay"
+        },
+        {
+            "id": "9_bY_Xixc6w",
+            "category": ["intro"],
+            "title": "Monster Hunter World: Iceborne Velkhana Beta"
+        },
+        {
+            "id": "i6VlpRgMmP0",
+            "category": ["ecology", "cutscene"],
+            "title": "Monster Hunter World: Iceborne Trailer #4"
+        }
+    ]
+}

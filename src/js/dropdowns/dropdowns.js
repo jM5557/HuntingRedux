@@ -39,18 +39,7 @@ class Dropdown {
 }
 
 class DropdownWithLinks extends Dropdown {
-    constructor (root) {
-        let items = [
-            {
-                text: "Google Drive 01",
-                link: "https://google.com"
-            },
-            {
-                text: "Google Drive 02",
-                link: "https://drive.google.com"
-            }
-        ];
-        
+    constructor (root, items) {
         super(root, items);
 
         $(root + " .download-link-a").prop("href", this.selectedItem.link);
@@ -69,5 +58,3 @@ class DropdownWithLinks extends Dropdown {
         });
     }
 }
-
-new DropdownWithLinks('#top-header .dropdown');
