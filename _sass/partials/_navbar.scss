@@ -88,7 +88,7 @@
             }
     
             .item-list {
-                display: none;
+                display: table;
                 box-sizing: border-box;
                 background-color: #312e38;
                 position: absolute;
@@ -97,10 +97,6 @@
                 margin: auto;
                 z-index: 5;
                 animation: fadeIn 0.32s forwards;
-    
-                &.visible {
-                    display: table;
-                }
     
                 @keyframes fadeIn {
                     from {

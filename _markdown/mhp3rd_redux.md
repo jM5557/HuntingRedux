@@ -79,9 +79,9 @@ latestTrailer: m6guHcGEqX8
 
 			<section class = 'col small'>
 
-				<div class = "panel-item">
+				<div class = "panel-item box">
 					<div class = "trailer-thumbnail">
-						<p>Showcase Trailer</p>
+						<h3>Showcase Trailer</h3>
 						<iframe src="https://www.youtube.com/embed/{{page.latestTrailer}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>

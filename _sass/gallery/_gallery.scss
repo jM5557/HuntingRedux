@@ -82,8 +82,7 @@
 	}
 
 	&.mhp3rd {
-		background: #4a200d 
-		url(#{$imgPath + $latestGame + "/large-bg-2.png"}) no-repeat bottom right 0px;
+		background: #4a200d url(#{$imgPath + $latestGame + "/large-bg-2.png"}) no-repeat bottom right 0px;
 		background-size: cover;
 		padding: 5px 5px 45px;
 		border-radius: $large-item-b-r;

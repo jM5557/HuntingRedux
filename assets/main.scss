@@ -353,6 +353,10 @@ strong {
 	@media all and (max-width: $breakpoint__mobile) {
 		display: block;
 
+		header {
+			max-width: 100%;
+		}
+
 		.latest-rls {
 			display: table;
 			margin-top: 15px;
@@ -385,7 +389,7 @@ main.page-content {
 }
 
 .trailer-thumbnail {
-	background: #111 url('./img/mhp3rd/hero-wp.jpg') no-repeat center center;
+	background: #111 url('./img/canvas-texture.png') no-repeat top 0px center;
 	background-size: cover;
 	display: block;
 	margin-top: auto;
@@ -395,6 +399,7 @@ main.page-content {
 	color: #FFF;
 	font-weight: bolder;
 	text-transform: uppercase;
+	padding-bottom: 24px;
 	
 	p {
 		font-family: $fontHeavy;
@@ -406,8 +411,9 @@ main.page-content {
 
 	iframe {
 		margin: auto auto;
-		width: 100%;
+		width: 85%;
 		height: 240px;
+		display: block;
 	}
 
 }
@@ -433,6 +439,19 @@ main.page-content {
 		color: #312e38;
 		text-shadow: -2px 0px 1px #4eb8e6;
 		text-align: left;
+	}
+
+	&.box {
+		h1, h2, h3, h4, h5, h6 {
+			font-size: 24px;
+			padding: 25px 10px 20px;
+			margin: auto auto;
+			color: #FFF;
+			text-shadow: none;
+			text-align: center;
+		}
+
+		border-radius: $large-item-b-r;
 	}
 
 	h1 {
@@ -602,6 +621,7 @@ main.page-content {
 
 	@media all and (max-width: $breakpoint__mobile_header) {
 		margin-top: auto;
+		padding-top: 25px;
 	}
 }
 

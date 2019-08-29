@@ -6,12 +6,15 @@ import Dropdown, { DropdownWithLinks } from './../components/dropdowns/dropdowns
 import VideosPage from './../components/pages/videos-page';
 
 import LatestRelease from './../../_data/latest-release.json';
+import responsiveNavbar from './scripts/partials/navbar';
 
 // toggable content
 $(".toggable").click(function (event) {
     event.stopPropagation();
     $(".content", this).toggleClass('visible');
 });
+
+responsiveNavbar();
 
 if (document.getElementById('videos-list'))
     ReactDOM.render(<VideosPage />, document.getElementById('videos-list'));
