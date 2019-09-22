@@ -1,0 +1,23 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(720px);
+    }
+
+    64%, 80% {
+        transform: translateX(20px);
+    }
+
+    72%, to {
+        transform: translateX(0px);
+    }
+}

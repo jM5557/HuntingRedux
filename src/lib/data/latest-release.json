@@ -1,0 +1,21 @@
+{
+    "text": "Download Full Pack",
+    "download_links": [
+        {
+            "name": "Google Drive 01",
+            "link": "https://google.com"
+        },
+        {
+            "name": "Google Drive 02",
+            "link": "https://youtube.com"
+        },
+        {
+            "name": "MEGA.nz",
+            "link": "https://reddit.com"
+        }
+    ],
+    "MD5_hash": "ldmflksfnkldsndsnlkfnsklnfkls",
+    "date_uploaded": "February 10th, 2019",
+    "file_size": "3 GB",
+    "version": "beta-1.0"
+}

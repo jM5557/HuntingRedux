@@ -1,0 +1,59 @@
+@mixin darkOverlay(
+		$overlayNum: 0.40, 
+		$zIndex: -1, 
+		$overlayColor: #111
+) {
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: $overlayNum;
+		background-color: $overlayColor;
+		z-index: $zIndex;
+	}
+
+}
+
+@mixin barOnTop($color: #111) {
+	&:after {
+		content: "";
+		top: -5px;
+		width: 65%;
+		height: 20px;
+		background-color: $color;
+		position: absolute;
+		left: -10px;
+		z-index: -1;
+		max-width: 100px;
+	}
+}
+
+@mixin barOnBottom($color:#111) {
+	&:after {
+		content: "";
+		bottom: -5px;
+		width: 65%;
+		height: 20px;
+		background-color: $color;
+		position: absolute;
+		right: -5px;
+		z-index: -1;
+		width: 100px;
+	}
+}
+
+@mixin rightCaret {
+	border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid;
+	display: inline-block;
+	vertical-align: middle;
+    height: 0;
+    opacity: 1;
+    width: 0;
+}

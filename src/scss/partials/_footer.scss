@@ -1,0 +1,156 @@
+$twitter-logo: './../images/twitter-logo.png';
+$discord-logo: './../images/discord-logo.png';
+$youtube-logo: './../images/youtube-logo.png';
+
+$contact-us-bg: './../images/footer-contact.jpg';
+
+.social-links {
+    padding: 0px 0px 0px;
+    text-align: left;
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        color: $colorWhite;
+        margin: 10px 5px 10px 0px;
+        background-color: #111;
+        height: 50px;
+        width: 50px;
+        border-radius: 1px;
+    }
+
+    .twitter {
+        background: #111 url($twitter-logo) no-repeat center center;
+        background-size: contain;
+    }
+
+    .discord {
+        background: #111 url($discord-logo) no-repeat center center;
+        background-size: 85% auto;
+    }
+
+    .youtube {
+        background: #111 url($youtube-logo) no-repeat center center;
+        background-size: 65% auto;
+    }
+
+    span {
+        display: none;
+    }
+
+
+}
+
+.upper-content {
+	padding: 76px 15px;
+}
+
+.contact {
+	text-align: center;
+    padding: 0px 15px 0px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: auto 0px auto auto;
+	color: #111;
+	background-size: cover;
+	border-top: solid 3px #111;
+
+	.inner-content {
+		max-width: 1440px;
+		text-align: left;
+		margin: auto auto auto auto;
+		box-sizing: border-box;
+		padding-left: 45px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.navigation-links {
+		display: inline-block;
+		vertical-align: top;
+
+		font-family: $fontHeavy;
+		font-size: 13px;
+
+		li {
+			a {
+				color: #111;
+				display: block;
+				padding: 15px 8px;
+
+
+				&:hover {
+					color: red;
+				}
+			}
+		}
+	}
+
+	img {
+		max-width: 240px;
+	}
+
+	h2 {
+		font-size: 28px;
+		padding: 0px 0px 5px;
+		font-family: $fontHeavy;
+		letter-spacing: 1.75px;
+	}
+
+	.subtitle {
+		margin-bottom: auto;
+		font-size: 14px;
+		font-family: $fontHeavy;
+		letter-spacing: 1.25px;
+		color: #333;
+		font-weight: bolder;
+		padding: 8px 0px;
+	}
+
+	hr {
+		display: block;
+		max-width: 64px;
+		background-color: #c1d2ff;
+		height: 20px;
+		margin: 15px auto 20px;
+		border: none;
+	}
+
+	.email-link {
+        display: inline-block;
+        border: none;
+        padding: 16px 0px;
+        font-weight: bolder;
+        letter-spacing: 1.25px;
+        border-radius: 1px;
+        font-size: 14px;
+        margin: auto auto auto 15px;
+        color: #111;
+		font-family: $fontHeavy;
+	}
+}
+
+.page_footer {
+	background-color: $colorBlack;
+	color: $colorWhite;
+	position: relative;
+	z-index: 5;
+}
+
+.notice {
+	font-size: 11px;
+	line-height: 1.15rem;
+	letter-spacing: 1.15px;
+	margin: auto auto auto;
+	padding: 48px 15px 48px;
+	text-align: center;
+	font-weight: bolder;
+	max-width: 980px;
+	text-align: center;
+	display: inline-block;
+	border-top: solid thin #DDD;
+}
+
+@media all and (max-width: $breakpoint__mobile_header) {
+	.notice { text-align: left; }
+}

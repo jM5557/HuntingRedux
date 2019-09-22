@@ -1,0 +1,92 @@
+.gallery {
+
+	max-width: 980px;
+	margin: auto;
+
+	.gallery-thumbnail {
+		width: 25%;
+		position: relative;
+		background-color: #111;
+		display: inline-block;
+		box-sizing: border-box;
+		margin: 0px 0px -2px;
+		cursor: pointer;
+		
+
+		&:hover {
+			opacity: 0.70;
+			z-index: 10;
+			box-shadow: 0px 5px 35px -8px #111;
+		}
+
+		@media all and (max-width: $breakpoint__mobile) {
+			display: block;
+			width: 85%;
+			margin: 5px auto;
+
+			&:hover {
+				transform: scale(1.02);
+				z-index: 10;
+				box-shadow: 0px 5px 45px -8px #111;
+			}
+		}
+	}
+}
+
+#gallery {
+	text-align: center;
+	background: #4a200d 
+		url(#{$imgPath + $latestGame + "/screens-bg.png"}) no-repeat center center;
+	background-size: cover;
+	padding: 20px 25px 55px;
+
+	.gallery__cont {
+		max-width: 1440px;
+		margin: auto auto auto auto;
+		padding: 35px 15px;
+		text-align: left;
+
+		.gallery {
+			max-width: 720px;
+			margin: auto auto auto 0px;
+		}
+	}
+
+	.heading {
+		text-align: left;
+		color: #FFF;
+		padding: 3px 0px 3px;
+		font-size: 24px;
+		letter-spacing: 1.55px;
+		text-transform: uppercase;
+		position: relative;
+		z-index: 1;
+		display: inline-block;
+		margin: 15px auto 25px;
+		text-shadow: -2px 0px 12px #111;
+		
+
+	}
+
+	&.mhp3rd {
+		background: #4a200d 
+		url(#{$imgPath + $latestGame + "/large-bg-2.png"}) no-repeat bottom right 0px;
+		background-size: cover;
+		padding: 5px 5px 45px;
+		border-radius: $large-item-b-r;
+
+		.gallery__cont {
+			text-align: center;
+			padding: 5px 5px;
+		}
+
+		.gallery-thumbnail {
+			width: 80px;
+			height: 80px;
+
+			img {
+				left: 0px;
+			}
+		}
+	}
+}
